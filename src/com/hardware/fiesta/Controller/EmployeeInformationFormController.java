@@ -93,9 +93,6 @@ public class EmployeeInformationFormController {
 
         this.emdb = emdb;
     }
-    public void setMainView(VBox mainView){
-        this.mainView = mainView;
-    }
     public void setUILoader(UILoader uiLoader){
 
         this.uiLoader = uiLoader;
@@ -106,6 +103,8 @@ public class EmployeeInformationFormController {
 
         this.updateEmployeeRootLayout = this.uiLoader.getUpdateEmployeeViewRootLayout();
         this.updateEmployeeIController = this.uiLoader.getUpdateEmployeeController();
+
+        this.mainView = uiLoader.getMainMenuController().mainViewContainer;
     }
 
 

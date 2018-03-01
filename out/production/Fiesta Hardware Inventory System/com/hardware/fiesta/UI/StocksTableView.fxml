@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="stockTableViewContainer" alignment="CENTER" prefWidth="1000.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hardware.fiesta.Controller.StocksTableViewController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="View : ">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="viewComboBox">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </JFXComboBox>
+         </children>
+      </HBox>
+      <VBox fx:id="tableViewContainer" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
+   </children>
+</VBox>

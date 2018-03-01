@@ -1,32 +1,53 @@
 package com.hardware.fiesta;
 
-import com.hardware.fiesta.Database.StockDatabaseConnector;
+import com.hardware.fiesta.LoaderUI.UILoader;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 
 public class Main extends Application {
-
+    UILoader uiLoader;
 
 
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        Parent root = FXMLLoader.load(getClass().getResource("UI/mainMenu.fxml"));
-        primaryStage.setScene(new Scene(root));
+        uiLoader = new UILoader();
+
+        System.out.println(this.uiLoader+ "in Start method");
+
+        System.out.println(this.uiLoader.getMainMenuViewRootLayout());
+
+        Scene scene = new Scene(this.uiLoader.getMainMenuViewRootLayout());
+        this.uiLoader.getMainMenuController().setUiLoader(uiLoader);
+
+
+        primaryStage.setScene(scene);
         primaryStage.setTitle("FIESTA HARDWARE SYSTEM");
         primaryStage.centerOnScreen();
         primaryStage.show();
 
     }
 
+    @Override
+    public void init() throws Exception {
+
+
+        System.out.println(uiLoader+ "in Init method");
+
+
+    }
+
     public static void main(String[] args) {
 
-        StockDatabaseConnector stdb = StockDatabaseConnector.getInstance();
-        stdb.openConnection();
+
+
+
+
+
+//        StockDatabaseConnector stdb = StockDatabaseConnector.getInstance();
+//        stdb.openConnection();
 
 
 //        StockCategory stockCategory = new StockCategory("Electric Tools");
@@ -69,9 +90,10 @@ public class Main extends Application {
 //        System.out.println(stockSupplier.getSupplierStatus());
 
 
-        stdb.closeConnection();
-        System.exit(0);
-        //launch(args);
+//        stdb.closeConnection();
+//        System.exit(0);
+
+        launch(args);
 
     }
 

@@ -261,7 +261,7 @@ public class StockDatabaseConnector {
 
             conn.close();
 
-            System.out.println("Employees Database Closed Succesfully");
+            System.out.println("Stocks Database Closed Succesfully");
 
         }catch (SQLException e){
 
@@ -985,7 +985,61 @@ public class StockDatabaseConnector {
     }
 
 
-    
+    public ArrayList<String> getStockSuppliersColumnName(){
+
+        ArrayList<String> columnNames = new ArrayList<>();
+
+        columnNames.add(SUPPLIER_ID);
+        columnNames.add(SUPPLIER_NAME);
+        columnNames.add(SUPPLIER_ADDRESS);
+        columnNames.add(SUPPLIER_CONTACT_NUMBER);
+        columnNames.add(SUPPLIER_EMAIL_ADDRESS);
+        columnNames.add(SUPPLIER_STATUS);
+
+        return columnNames;
+    }
+
+    public ArrayList<String> getStockCategoriesColumnName(){
+
+        ArrayList<String> columnNames = new ArrayList<>();
+
+        columnNames.add(CATEGORY_ID);
+        columnNames.add(CATEGORY_NAME);
+        columnNames.add(CATEGORY_STATUS);
+
+        return columnNames;
+    }
+
+    public ArrayList<String> getStockTypesColumnName(){
+
+        ArrayList<String> columnNames = new ArrayList<>();
+
+        columnNames.add(TYPE_ID);
+        columnNames.add(TYPE_NAME);
+        columnNames.add(TYPE_STATUS);
+
+        return columnNames;
+    }
+
+    public ArrayList<String> getStockBrandNamesColumnName(){
+
+        ArrayList<String> columnNames = new ArrayList<>();
+
+        columnNames.add(BRAND_NAME_ID);
+        columnNames.add(BRAND_NAME_NAME);
+        columnNames.add(BRAND_NAME_STATUS);
+
+        return columnNames;
+    }
+
+
+
+
+
+
+
+
+
 
 
 

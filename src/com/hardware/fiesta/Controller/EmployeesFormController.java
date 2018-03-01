@@ -5,6 +5,7 @@ import com.hardware.fiesta.LoaderUI.UILoader;
 import com.hardware.fiesta.Model.Employee;
 import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -16,7 +17,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -58,15 +58,14 @@ public class EmployeesFormController {
     private MenuItem enable_employee = new MenuItem("Enable Employee");
 
     private EmployeeInformationFormController employeeInformationFormController;
-
-    private VBox mainView;
-
     private UILoader uiLoader;
+
+
+
 
     public void initialize(){
 
         setActionOnDoubleClickOnTableRow();
-
 
     }
 
@@ -77,12 +76,16 @@ public class EmployeesFormController {
         employees = FXCollections.observableArrayList(this.emdb.getEmployeeList(isEnabled));
         emdb.closeConnection();
 
+
     }
     private void loadDatainObservableList(){
 
         emdb.openConnection();
         employees = FXCollections.observableArrayList(this.emdb.getEmployeeList());
         emdb.closeConnection();
+
+
+
 
     }
 
@@ -92,26 +95,40 @@ public class EmployeesFormController {
 
         System.out.println(emdb);
         loadDatainObservableList(isEnabled);
-        setValuesToTableView();
-        setContextMenuOnTableView();
 
-        if(isEnabled){
-            emp_context.getItems().remove(enable_employee);
-            rb_viewEnabled.setSelected(true);
-        }else {
-            emp_context.getItems().remove(disable_employee);
-            rb_viewDisabled.setSelected(true);
-        }
+        Platform.runLater(() -> {
+
+            setValuesToTableView();
+            setContextMenuOnTableView();
+
+            if(isEnabled){
+                emp_context.getItems().remove(enable_employee);
+                rb_viewEnabled.setSelected(true);
+            }else {
+                emp_context.getItems().remove(disable_employee);
+                rb_viewDisabled.setSelected(true);
+            }
+
+
+        });
 
     }
 
     private void displayEmployees(){
 
+
+
         System.out.println(emdb);
         loadDatainObservableList();
-        setValuesToTableView();
-        setContextMenuOnTableView();
-        rb_viewAll.setSelected(true);
+
+        Platform.runLater(() ->{
+
+            setValuesToTableView();
+            setContextMenuOnTableView();
+            rb_viewAll.setSelected(true);
+
+        });
+
 
 
     }
@@ -119,25 +136,13 @@ public class EmployeesFormController {
     //load all of the data in the employees Observable List
     private void setValuesToTableView(){
 
-            tc_emp_id.setCellValueFactory(new PropertyValueFactory<>("id"));
-            tc_emp_first.setCellValueFactory(new PropertyValueFactory<>("firstName"));
-            tc_emp_middle.setCellValueFactory(new PropertyValueFactory<>("middleName"));
-            tc_emp_last.setCellValueFactory(new PropertyValueFactory<>("lastName"));
-            tc_emp_birth.setCellValueFactory(new PropertyValueFactory<>("birthDate"));
-            tc_emp_address.setCellValueFactory(new PropertyValueFactory<>("address"));
-            tc_emp_number.setCellValueFactory(new PropertyValueFactory<>("contactNumber"));
-            tc_emp_email.setCellValueFactory(new PropertyValueFactory<>("emailAddress"));
-            tc_emp_status.setCellValueFactory(new PropertyValueFactory<>("status"));
-            tc_emp_last_updated.setCellValueFactory(new PropertyValueFactory<>("lastUpdated"));
 
-            tv_employees.setItems(employees);
+           setDataOnColumn();
+           tv_employees.setItems(employees);
 
         }
 
-
-    //Setting the values to the Table View
-    //Parameter: Observable List
-    private void setValuesToTableView(ObservableList<Employee> empList){
+    private void setDataOnColumn(){
 
         tc_emp_id.setCellValueFactory(new PropertyValueFactory<>("id"));
         tc_emp_first.setCellValueFactory(new PropertyValueFactory<>("firstName"));
@@ -150,6 +155,13 @@ public class EmployeesFormController {
         tc_emp_status.setCellValueFactory(new PropertyValueFactory<>("status"));
         tc_emp_last_updated.setCellValueFactory(new PropertyValueFactory<>("lastUpdated"));
 
+    }
+
+    //Setting the values to the Table View
+    //Parameter: Observable List
+    private void setValuesToTableView(ObservableList<Employee> empList){
+
+        setDataOnColumn();
         tv_employees.setItems(empList);
 
     }
@@ -276,14 +288,12 @@ public class EmployeesFormController {
 
     }
 
-
     private void viewEmployee(Employee employee){
 
 
       employeeInformationFormController.setEmdb(emdb);
       employeeInformationFormController.setUILoader(this.uiLoader);
       employeeInformationFormController.setEmployee(employee);
-      employeeInformationFormController.setMainView(mainView);
       employeeInformationFormController.displayData();
 
 
@@ -313,11 +323,6 @@ public class EmployeesFormController {
    /*/
    * Setters of this Class
    * */
-    public void setMainView(VBox mainView){
-
-        this.mainView = mainView;
-
-    }
     public void setEmdb(EmployeesDatabaseConnector emdb){
 
         this.emdb = emdb;
@@ -326,12 +331,7 @@ public class EmployeesFormController {
     }
     public void setUiLoader(UILoader uiLoader){
         this.uiLoader = uiLoader;
-        System.out.println(uiLoader+" UI LOADER FROM the Employees Form Controller Class");
-
         this.employeeInformationFormController = this.uiLoader.getEmployeeInformationFormController();
-
-
-
 
     }
 

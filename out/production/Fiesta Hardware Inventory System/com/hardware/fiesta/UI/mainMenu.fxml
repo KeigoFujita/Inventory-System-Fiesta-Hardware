@@ -101,7 +101,7 @@
                 </JFXRippler>
                 <JFXRippler onMouseClicked="#stockAction" ripplerFill="WHITE">
                     <control>
-                        <GridPane prefWidth="180.0" styleClass="buttonStyle">
+                        <GridPane fx:id="gp_stocks" prefWidth="180.0" styleClass="buttonStyle">
                             <columnConstraints>
                                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="70.0" prefWidth="100.0" />

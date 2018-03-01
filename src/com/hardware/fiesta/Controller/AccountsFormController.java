@@ -134,14 +134,11 @@ public class AccountsFormController {
 
         this.employeeInformationViewRootLayout = uiLoader.getEmployeeInformationViewRootLayout();
         this.employeeInformationFormController = uiLoader.getEmployeeInformationFormController();
+        this.mainView = uiLoader.getMainMenuController().mainViewContainer;
 
 
    }
-   public void setMainView(VBox mainView){
 
-        this.mainView = mainView;
-
-   }
 
 
    private void setContextMenuOnTableView() {
@@ -193,10 +190,12 @@ public class AccountsFormController {
 
         employeeInformationFormController.setEmdb(this.emdb);
         employeeInformationFormController.setUILoader(this.uiLoader);
-        employeeInformationFormController.setMainView(this.mainView);
         employeeInformationFormController.setEmployee(account.getEmpId());
         employeeInformationFormController.displayData();
 
     }
+
+
+
 
 }

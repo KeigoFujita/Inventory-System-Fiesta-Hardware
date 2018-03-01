@@ -2,7 +2,9 @@ package com.hardware.fiesta.Controller;
 
 
 import com.hardware.fiesta.Database.EmployeesDatabaseConnector;
+import com.hardware.fiesta.Database.StockDatabaseConnector;
 import com.hardware.fiesta.LoaderUI.UILoader;
+import javafx.geometry.Pos;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
@@ -10,13 +12,14 @@ public class MainMenuController {
 
     //Employees Database Connection used in the system
     private EmployeesDatabaseConnector emdb;
+    private StockDatabaseConnector stdb;
 
 
     //Root Element of the mainMenuForm
     public GridPane gridPane;
 
     //Gridpane Button of for Styling purposes
-    public GridPane gp_employees,gp_accounts,gp_dashBoard;
+    public GridPane gp_employees,gp_accounts,gp_dashBoard,gp_stocks;
 
     //GridPane Button that is currently Active
     private GridPane gp_button_active;
@@ -47,29 +50,7 @@ public class MainMenuController {
     public void initialize(){
 
         emdb = new EmployeesDatabaseConnector();
-        uiLoader = new UILoader();
-
-        System.out.println(uiLoader+" UI LOADER FROM the Main Menu Controller");
-
-
-        dashBoardGridPane = uiLoader.getDashBoardRootLayout();
-        dashboardFormController = uiLoader.getDashboardFormController();
-        dashboardFormController.setLabel("Hello Words");
-
-        employeeVbox            = uiLoader.getEmployeeViewRootlayout();
-        employeesFormController = uiLoader.getEmployeesFormController();
-
-        accountsVbox = uiLoader.getAccountsViewRootLayout();
-        accountsFormController = uiLoader.getAccountsFormController();
-
-
-       //SETTING THE DASH BOARD AS FIRST DISPLAY
-       setDashboardOnDisplay();
-
-       //SETTING THE CURRENT ACTIVE BUTTON
-       gp_button_active = gp_dashBoard;
-       setOnFocusedStyleforButtons(gp_dashBoard);
-
+        stdb = new StockDatabaseConnector();
 
     }
 
@@ -81,12 +62,24 @@ public class MainMenuController {
     }
     public void stockAction(){
 
+        setOnFocusedStyleforButtons(gp_stocks);
+
+        uiLoader.getStocksTableViewController().setStdb(this.stdb);
+        uiLoader.getStocksTableViewController().setUILoader(this.uiLoader);
+        uiLoader.getStocksTableViewController().displayData();
+
+        mainViewContainer.getChildren().clear();
+        mainViewContainer.setAlignment(Pos.TOP_CENTER);
+        mainViewContainer.getChildren().add(uiLoader.getStocksTableViewRootLayout());
+
+
     }
     public void salesAction(){
 
         System.out.println("clicked sales!!!");
     }
     public void employeesAction(){
+
 
        setOnFocusedStyleforButtons(gp_employees);
        setTableViewEmployees();
@@ -102,7 +95,7 @@ public class MainMenuController {
     }
     public void settingsAction(){
 
-        System.out.println("clicked settings!!!");
+       System.out.println("clicked settings!!!");
     }
 
 
@@ -111,15 +104,13 @@ public class MainMenuController {
 
 
         employeesFormController.setUiLoader(this.uiLoader);
-        employeesFormController.setMainView(mainViewContainer);
         employeesFormController.setEmdb(emdb);
         employeesFormController.displayEmployees(true);
 
 
-        //setting the VBox view from EmployeeTableView.fxml in the Vbox Layout
-        mainViewContainer.getChildren().clear();
-        mainViewContainer.getChildren().add(employeeVbox);
-
+       //setting the VBox view from EmployeeTableView.fxml in the Vbox Layout
+      mainViewContainer.getChildren().clear();
+      mainViewContainer.getChildren().add(employeeVbox);
 
 
     }
@@ -128,7 +119,6 @@ public class MainMenuController {
 
         accountsFormController.setEmdb(emdb);
         accountsFormController.setUILoader(this.uiLoader);
-        accountsFormController.setMainView(this.mainViewContainer);
         accountsFormController.displayAccounts();
 
 
@@ -155,7 +145,29 @@ public class MainMenuController {
     }
 
 
+    public void setUiLoader(UILoader uiLoader){
+        this.uiLoader = uiLoader;
+        System.out.println(uiLoader+" UI LOADER FROM the Main Menu Controller");
 
+        dashBoardGridPane = uiLoader.getDashBoardRootLayout();
+        dashboardFormController = uiLoader.getDashboardFormController();
+        dashboardFormController.setLabel("Hello Words");
+
+        employeeVbox            = uiLoader.getEmployeeViewRootlayout();
+        employeesFormController = uiLoader.getEmployeesFormController();
+
+        accountsVbox = uiLoader.getAccountsViewRootLayout();
+        accountsFormController = uiLoader.getAccountsFormController();
+
+
+        //SETTING THE DASH BOARD AS FIRST DISPLAY
+        setDashboardOnDisplay();
+
+        //SETTING THE CURRENT ACTIVE BUTTON
+        gp_button_active = gp_dashBoard;
+        setOnFocusedStyleforButtons(gp_dashBoard);
+
+    }
 
 
 
