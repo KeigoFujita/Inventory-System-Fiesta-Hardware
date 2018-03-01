@@ -179,6 +179,12 @@ public class StockDatabaseConnector {
                     +"VALUES (?,?,?,?)";
 
 
+
+
+
+
+
+
 //    //STATEMENT FOR UPDATING EMPLOYEE
 //
 //    private static final String UPDATE_EMPLOYEE_STATEMENT =
@@ -979,7 +985,7 @@ public class StockDatabaseConnector {
     }
 
 
-
+    
 
 
 
