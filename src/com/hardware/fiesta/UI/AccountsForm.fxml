@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vb_accounts" alignment="TOP_CENTER" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hardware.fiesta.Controller.AccountsFormController">
+   <children>
+      <TableView fx:id="tv_accounts" prefWidth="1010.0" VBox.vgrow="NEVER">
+         <columns>
+            <TableColumn fx:id="tc_acc_id" prefWidth="100.0" text="account_id" />
+            <TableColumn fx:id="tc_acc_emp_id" prefWidth="150.0" text="emp_id" />
+            <TableColumn fx:id="tc_acc_username" minWidth="0.0" prefWidth="150.0" text="account_username" />
+            <TableColumn fx:id="tc_acc_password" prefWidth="150.0" text="account_password" />
+            <TableColumn fx:id="tc_acc_type" prefWidth="150.0" text="account_type" />
+            <TableColumn fx:id="tc_acc_lastlogin" prefWidth="250.0" text="account_last_login" />
+            <TableColumn fx:id="tc_acc_status" prefWidth="150.0" text="account_status" />
+         </columns>
+      </TableView>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <JFXButton onAction="#decryptPassword" prefWidth="250.0" style="-fx-background-color: white;" text="DECRYPT PASSWORD">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton onAction="#encryptPassword" prefWidth="250.0" style="-fx-background-color: white;" text="ENCRYPT PASSWORD">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</VBox>

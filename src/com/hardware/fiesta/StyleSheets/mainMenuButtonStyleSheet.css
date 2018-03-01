@@ -1,0 +1,18 @@
+
+.buttonStyle{
+
+    -fx-background-color:#00293c;
+}
+
+.buttonStyle:hover {
+
+ -fx-background-color:#2481a1;
+
+ }
+
+
+.buttonFocused{
+-fx-background-color:#2481a1;
+
+
+}

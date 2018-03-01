@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="viewEmployeeContainer" prefHeight="600.0" prefWidth="800.0" stylesheets="@../StyleSheets/employeeInformationStylesheet.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hardware.fiesta.Controller.EmployeeInformationFormController">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <children>
+            <VBox fx:id="vb_EmpInformation" prefHeight="400.0" prefWidth="100.0">
+                <children>
+                    <HBox prefHeight="30.0" prefWidth="200.0">
+                        <children>
+                            <Label prefHeight="30.0" text="Employee Id: ">
+                                <font>
+                                    <Font size="16.0" />
+                                </font>
+                                <padding>
+                                    <Insets left="20.0" />
+                                </padding>
+                            </Label>
+                            <Label fx:id="lbl_id" prefHeight="30.0">
+                                <font>
+                                    <Font name="System Bold" size="20.0" />
+                                </font>
+                            </Label>
+                        </children>
+                    </HBox>
+                    <HBox prefHeight="50.0" prefWidth="200.0">
+                        <children>
+                            <Label fx:id="lbl_lastName" text="ROM,">
+                                <font>
+                                    <Font name="Century Gothic Bold" size="56.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="lbl_firstName" text="John Harold Ace">
+                                <font>
+                                    <Font name="Century Gothic" size="56.0" />
+                                </font>
+                                <HBox.margin>
+                                    <Insets left="10.0" />
+                                </HBox.margin>
+                            </Label>
+                        </children>
+                        <padding>
+                            <Insets left="20.0" />
+                        </padding>
+                    </HBox>
+                    <HBox prefHeight="30.0" prefWidth="200.0">
+                        <children>
+                            <Label text="Birthday: ">
+                                <font>
+                                    <Font name="Century Gothic" size="24.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="lbl_birthday" text="November 24, 1999">
+                                <font>
+                                    <Font name="Century Gothic" size="24.0" />
+                                </font>
+                                <HBox.margin>
+                                    <Insets bottom="10.0" />
+                                </HBox.margin>
+                            </Label>
+                        </children>
+                        <VBox.margin>
+                            <Insets top="30.0" />
+                        </VBox.margin>
+                        <padding>
+                            <Insets left="20.0" />
+                        </padding>
+                    </HBox>
+                    <HBox prefHeight="30.0" prefWidth="200.0">
+                        <children>
+                            <Label text="Address: ">
+                                <font>
+                                    <Font name="Century Gothic" size="24.0" />
+                                </font>
+                                <HBox.margin>
+                                    <Insets />
+                                </HBox.margin>
+                            </Label>
+                            <Label fx:id="lbl_address" text="Cainta, Rizal">
+                                <font>
+                                    <Font name="Century Gothic" size="24.0" />
+                                </font>
+                            </Label>
+                        </children>
+                        <padding>
+                            <Insets left="20.0" />
+                        </padding>
+                        <VBox.margin>
+                            <Insets bottom="10.0" />
+                        </VBox.margin>
+                    </HBox>
+                    <HBox prefHeight="30.0" prefWidth="200.0">
+                        <children>
+                            <Label text="Contact Number: ">
+                                <font>
+                                    <Font name="Century Gothic" size="24.0" />
+                                </font>
+                                <HBox.margin>
+                                    <Insets />
+                                </HBox.margin>
+                            </Label>
+                            <Label fx:id="lbl_contact" text="09126126901">
+                                <font>
+                                    <Font name="Century Gothic" size="24.0" />
+                                </font>
+                            </Label>
+                        </children>
+                        <padding>
+                            <Insets left="20.0" />
+                        </padding>
+                        <VBox.margin>
+                            <Insets bottom="10.0" />
+                        </VBox.margin>
+                    </HBox>
+                    <HBox prefHeight="30.0" prefWidth="200.0">
+                        <children>
+                            <Label text="Email Address: ">
+                                <font>
+                                    <Font name="Century Gothic" size="24.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="lbl_email" text="keigofujita19@gmail.com">
+                                <font>
+                                    <Font name="Century Gothic" size="24.0" />
+                                </font>
+                            </Label>
+                        </children>
+                        <padding>
+                            <Insets left="20.0" />
+                        </padding>
+                        <VBox.margin>
+                            <Insets bottom="10.0" />
+                        </VBox.margin>
+                    </HBox>
+                    <HBox prefHeight="30.0" prefWidth="200.0">
+                        <children>
+                            <Label text="Age:">
+                                <font>
+                                    <Font name="Century Gothic" size="24.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="lbl_age" text="20 y/o">
+                                <font>
+                                    <Font name="Century Gothic" size="24.0" />
+                                </font>
+                                <padding>
+                                    <Insets left="10.0" />
+                                </padding>
+                            </Label>
+                        </children>
+                        <padding>
+                            <Insets left="20.0" />
+                        </padding>
+                        <VBox.margin>
+                            <Insets bottom="10.0" />
+                        </VBox.margin>
+                    </HBox>
+                    <HBox prefHeight="30.0" prefWidth="200.0">
+                        <children>
+                            <Label text="Status: ">
+                                <font>
+                                    <Font name="Century Gothic" size="24.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="lbl_status" text="Enabled">
+                                <font>
+                                    <Font name="Century Gothic" size="24.0" />
+                                </font>
+                            </Label>
+                        </children>
+                        <padding>
+                            <Insets left="20.0" />
+                        </padding>
+                        <VBox.margin>
+                            <Insets bottom="10.0" />
+                        </VBox.margin>
+                    </HBox>
+                    <HBox prefHeight="30.0" prefWidth="200.0">
+                        <children>
+                            <Label text="Last Updated: ">
+                                <font>
+                                    <Font name="Century Gothic" size="24.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="lbl_lastUpdated" text="02-15-2018 14:56">
+                                <font>
+                                    <Font name="Century Gothic" size="24.0" />
+                                </font>
+                            </Label>
+                        </children>
+                        <padding>
+                            <Insets left="20.0" />
+                        </padding>
+                        <opaqueInsets>
+                            <Insets />
+                        </opaqueInsets>
+                        <VBox.margin>
+                            <Insets bottom="10.0" />
+                        </VBox.margin>
+                    </HBox>
+                    <HBox prefHeight="100.0" prefWidth="200.0">
+                        <children>
+                            <JFXButton buttonType="RAISED" onAction="#buttonManageAction" prefWidth="200.0" style="-fx-background-color: #FCFBE3;" text="Manage Account">
+                                <opaqueInsets>
+                                    <Insets />
+                                </opaqueInsets>
+                                <HBox.margin>
+                                    <Insets left="20.0" top="30.0" />
+                                </HBox.margin>
+                                <font>
+                                    <Font name="Century Gothic" size="15.0" />
+                                </font>
+                            </JFXButton>
+                            <JFXButton buttonType="RAISED" onAction="#buttonEditEmployeeAction" prefWidth="200.0" style="-fx-background-color: #FCFBE3;" text="Edit Employee">
+                                <opaqueInsets>
+                                    <Insets />
+                                </opaqueInsets>
+                                <font>
+                                    <Font name="Century Gothic" size="15.0" />
+                                </font>
+                                <HBox.margin>
+                                    <Insets left="20.0" top="30.0" />
+                                </HBox.margin>
+                            </JFXButton>
+                        </children>
+                        <VBox.margin>
+                            <Insets top="20.0" />
+                        </VBox.margin>
+                    </HBox>
+                </children>
+            </VBox>
+        </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+    </GridPane>

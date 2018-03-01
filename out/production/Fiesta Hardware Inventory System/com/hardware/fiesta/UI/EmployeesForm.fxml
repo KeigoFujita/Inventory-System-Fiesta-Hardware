@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vb_employees" alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hardware.fiesta.Controller.EmployeesFormController">
+    <children>
+        <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0">
+            <children>
+                <JFXTextField fx:id="tf_search" focusColor="#0d8650" onKeyReleased="#tfSearchAction" unFocusColor="WHITE" />
+                <Label text="Search: ">
+                    <font>
+                        <Font name="Century Gothic" size="12.0" />
+                    </font>
+                </Label>
+            </children>
+            <VBox.margin>
+                <Insets bottom="10.0" />
+            </VBox.margin>
+        </HBox>
+        <TableView fx:id="tv_employees" fixedCellSize="0.0" minHeight="400.0" minWidth="800.0" prefHeight="500.0" prefWidth="800.0">
+            <columns>
+                <TableColumn fx:id="tc_emp_id" prefWidth="100.0" text="employee_id" />
+                <TableColumn fx:id="tc_emp_first" prefWidth="150.0" text="employee_first" />
+                <TableColumn fx:id="tc_emp_middle" minWidth="0.0" prefWidth="150.0" text="employee_middle" />
+                <TableColumn fx:id="tc_emp_last" prefWidth="150.0" text="employee_last" />
+                <TableColumn fx:id="tc_emp_birth" prefWidth="150.0" text="employee_birthday" />
+                <TableColumn fx:id="tc_emp_address" prefWidth="250.0" text="employee_address" />
+                <TableColumn fx:id="tc_emp_number" prefWidth="150.0" text="employee_phone" />
+                <TableColumn fx:id="tc_emp_email" prefWidth="150.0" text="employee_email" />
+                <TableColumn fx:id="tc_emp_status" text="employee_status" />
+                <TableColumn fx:id="tc_emp_last_updated" prefWidth="150.0" text="employee_last_updated" />
+            </columns>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </TableView>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+            <children>
+                <JFXButton buttonType="RAISED" onAction="#btAddEmployeeAction" prefWidth="250.0" style="-fx-background-color: teal;" text="ADD EMPLOYEE" textFill="#fffbfb">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                </JFXButton>
+                <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                    <children>
+
+                        <JFXRadioButton fx:id="rb_viewAll" onAction="#radioButtonViewEmployees" style="-fx-padding: 4;" text="View All" toggleGroup="$toggleGroup">
+                            <ToggleGroup fx:id="toggleGroup" />
+                        </JFXRadioButton>
+
+                        <JFXRadioButton fx:id="rb_viewEnabled" onAction="#radioButtonViewEmployees" style="-fx-padding: 4;" text="View Enabled" toggleGroup="$toggleGroup">
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="rb_viewDisabled" onAction="#radioButtonViewEmployees" style="-fx-padding: 4;" text="View Disabled" toggleGroup="$toggleGroup">
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </JFXRadioButton>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>
