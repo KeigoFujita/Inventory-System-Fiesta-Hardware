@@ -21,24 +21,7 @@
         <children>
             <VBox fx:id="vb_EmpInformation" prefHeight="400.0" prefWidth="100.0">
                 <children>
-                    <HBox prefHeight="30.0" prefWidth="200.0">
-                        <children>
-                            <Label prefHeight="30.0" text="Employee Id: ">
-                                <font>
-                                    <Font size="16.0" />
-                                </font>
-                                <padding>
-                                    <Insets left="20.0" />
-                                </padding>
-                            </Label>
-                            <Label fx:id="lbl_id" prefHeight="30.0">
-                                <font>
-                                    <Font name="System Bold" size="20.0" />
-                                </font>
-                            </Label>
-                        </children>
-                    </HBox>
-                    <HBox prefHeight="50.0" prefWidth="200.0">
+                    <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0">
                         <children>
                             <Label fx:id="lbl_lastName" text="ROM,">
                                 <font>
@@ -47,7 +30,7 @@
                             </Label>
                             <Label fx:id="lbl_firstName" text="John Harold Ace">
                                 <font>
-                                    <Font name="Century Gothic" size="56.0" />
+                                    <Font name="Century Gothic" size="48.0" />
                                 </font>
                                 <HBox.margin>
                                     <Insets left="10.0" />
@@ -57,6 +40,23 @@
                         <padding>
                             <Insets left="20.0" />
                         </padding>
+                    </HBox>
+                    <HBox prefHeight="30.0" prefWidth="200.0">
+                        <children>
+                            <Label prefHeight="30.0" text="Employee Id: ">
+                                <font>
+                                    <Font size="16.0" />
+                                </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                            </Label>
+                            <Label fx:id="lbl_id" prefHeight="30.0">
+                                <font>
+                                    <Font name="System Bold" size="20.0" />
+                                </font>
+                            </Label>
+                        </children>
                     </HBox>
                     <HBox prefHeight="30.0" prefWidth="200.0">
                         <children>
@@ -215,7 +215,7 @@
                     </HBox>
                     <HBox prefHeight="100.0" prefWidth="200.0">
                         <children>
-                            <JFXButton buttonType="RAISED" onAction="#buttonManageAction" prefWidth="200.0" style="-fx-background-color: #FCFBE3;" text="Manage Account">
+                            <JFXButton buttonType="RAISED" onAction="#buttonManageAction" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #00293c;" text="Manage Account/s" textFill="WHITE">
                                 <opaqueInsets>
                                     <Insets />
                                 </opaqueInsets>
@@ -226,7 +226,7 @@
                                     <Font name="Century Gothic" size="15.0" />
                                 </font>
                             </JFXButton>
-                            <JFXButton buttonType="RAISED" onAction="#buttonEditEmployeeAction" prefWidth="200.0" style="-fx-background-color: #FCFBE3;" text="Edit Employee">
+                            <JFXButton buttonType="RAISED" onAction="#buttonEditEmployeeAction" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #00293c;" text="Edit Employee" textFill="WHITE">
                                 <opaqueInsets>
                                     <Insets />
                                 </opaqueInsets>

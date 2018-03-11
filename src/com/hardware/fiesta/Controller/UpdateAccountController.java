@@ -40,7 +40,7 @@ public class UpdateAccountController {
     private UILoader uiLoader;
     private EmployeesDatabaseConnector emdb;
     private Employee employee;
-    private Account account;
+    private Account oldAccount;
 
 
     public void initialize(){
@@ -54,7 +54,7 @@ public class UpdateAccountController {
 
         lbl_prompText.setText("");
         lbl_employeeName.setText(employee.getFirstName());
-        tf_userName.setText(account.getUsername());
+        tf_userName.setText(oldAccount.getUsername());
         bt_UpdateAccount.setDisable(true);
 
     }
@@ -63,20 +63,21 @@ public class UpdateAccountController {
 
     public void buttonUpdateAccountAction(){
 
-
         String userName = tf_userName.getText();
         String oldPassword = tf_oldPassword.getText();
         String newPassword = tf_reEnterPassword.getText();
 
-        this.account.setPassword(oldPassword);
-        Account newAccount = new Account(userName,newPassword,this.account.getType());
+        Account account = new Account(userName,oldPassword);
 
+        emdb.openConnection();
 
-            emdb.openConnection();
+        System.out.println(emdb.searchAccount(userName,oldPassword));
 
-            if(emdb.searchAccount(this.account)){
+        if(emdb.searchAccount(oldAccount.getUsername(),account.getPassword())> 0){
 
-            emdb.updateAccount(this.account, newAccount);
+            Account newAccount = new Account(userName,newPassword,this.oldAccount.getType());
+
+            emdb.updateAccount(this.oldAccount, newAccount);
 
             lbl_prompText.setText("The account is updated Successfully!!1!");
             tf_userName.setText("");
@@ -135,6 +136,6 @@ public class UpdateAccountController {
     }
 
     public void setAccount(Account account) {
-        this.account = account;
+        this.oldAccount = account;
     }
 }

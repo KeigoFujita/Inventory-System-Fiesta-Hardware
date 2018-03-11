@@ -9,6 +9,9 @@ import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
+import javafx.scene.control.ContextMenu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -34,6 +37,12 @@ public class StockTypeController {
     @FXML
     private TableColumn<StockType, String> tc_typeStatus;
 
+    private ContextMenu type_context = new ContextMenu();
+
+    private MenuItem disable_type = new MenuItem("Disable Type");
+    private MenuItem enable_type = new MenuItem("Enable Type");
+    private MenuItem edit_type  = new MenuItem("Edit Type");
+
 
 
     private static ObservableList<StockType> stockTypes;
@@ -48,7 +57,6 @@ public class StockTypeController {
         stdb.closeConnection();
 
     }
-
     public void setNameInColumn(){
 
         stdb.openConnection();
@@ -61,7 +69,6 @@ public class StockTypeController {
 
 
     }
-
     public void setDataOnColumn(){
 
 
@@ -78,17 +85,17 @@ public class StockTypeController {
         setNameInColumn();
         loadDataInObservableList();
         setDataOnColumn();
+        setContextMenuOnTableView();
 
         tableView_Type.setItems(this.stockTypes);
 
     }
-
-
     public void displayTableView(ObservableList<StockType> stockTypes){
 
         setNameInColumn();
         loadDataInObservableList();
         setDataOnColumn();
+        setContextMenuOnTableView();
 
         tableView_Type.setItems(stockTypes);
 
@@ -119,20 +126,115 @@ public class StockTypeController {
         displayTableView(FXCollections.observableArrayList(sortedList));
 
     }
-
-
-
     public void buttonAddAction(){
 
+        uiLoader.getAddStockTypeController().setUiLoader(this.uiLoader);
+        uiLoader.getAddStockTypeController().tf_TypeName.setAlignment(Pos.CENTER);
+        uiLoader.getAddStockTypeController().tf_TypeName.setText("");
+        uiLoader.getAddStockTypeController().tf_addButton.setText("Add");
+        uiLoader.getAddStockTypeController().tf_prompText.setText("");
 
-        uiLoader.getAddStockTypeStage().setTitle("Add Category");
+        uiLoader.getAddStockTypeStage().setTitle("Add Type");
         uiLoader.getAddStockTypeStage().showAndWait();
 
     }
+    public void buttonEditAction(){
 
+
+
+        StockType stockType = tableView_Type.getSelectionModel().getSelectedItem();
+
+        if(stockType!=null){
+
+            this.uiLoader.getAddStockTypeController().setUiLoader(this.uiLoader);
+            this.uiLoader.getAddStockTypeController().tf_TypeName.setAlignment(Pos.CENTER);
+            this.uiLoader.getAddStockTypeController().tf_prompText.setText("");
+            this.uiLoader.getAddStockTypeController().setOldStockType(stockType);
+            this.uiLoader.getAddStockTypeController().tf_addButton.setText("Update Data");
+            this.uiLoader.getAddStockTypeController().tf_TypeName.setText(stockType.getTypeName());
+
+            uiLoader.getAddStockTypeStage().setTitle("Update Data");
+            uiLoader.getAddStockTypeStage().showAndWait();
+
+            displayTableView();
+
+        }
+
+    }
 
     public void setUiLoader(UILoader uiLoader) {
         this.uiLoader = uiLoader;
         this.stdb = uiLoader.getStdb();
     }
-}
+    private void setContextMenuOnTableView(){
+
+
+
+        disable_type.setOnAction(event -> {
+
+            StockType stockType = tableView_Type.getSelectionModel().getSelectedItem();
+            stdb.openConnection();
+
+            if(stockType!= null){
+
+                stdb.disableType(stockType);
+                stdb.closeConnection();
+                displayTableView();
+
+
+            }
+
+        });
+        enable_type.setOnAction(event -> {
+
+            StockType stockType = tableView_Type.getSelectionModel().getSelectedItem();
+            stdb.openConnection();
+
+
+            if(stockType!= null){
+
+                stdb.enableType(stockType);
+                stdb.closeConnection();
+                displayTableView();
+
+            }
+
+        });
+        edit_type.setOnAction(event -> {
+
+            StockType stockType = tableView_Type.getSelectionModel().getSelectedItem();
+
+            if(stockType!=null){
+
+                this.uiLoader.getAddStockTypeController().setUiLoader(this.uiLoader);
+                this.uiLoader.getAddStockTypeController().tf_TypeName.setAlignment(Pos.CENTER);
+                this.uiLoader.getAddStockTypeController().tf_prompText.setText("");
+                this.uiLoader.getAddStockTypeController().setOldStockType(stockType);
+                this.uiLoader.getAddStockTypeController().tf_addButton.setText("Update Data");
+                this.uiLoader.getAddStockTypeController().tf_TypeName.setText(stockType.getTypeName());
+
+                uiLoader.getAddStockTypeStage().setTitle("Update Data");
+                uiLoader.getAddStockTypeStage().showAndWait();
+
+                displayTableView();
+            }
+
+
+        });
+
+
+
+        type_context.getItems().add(disable_type);
+        type_context.getItems().add(enable_type);
+        type_context.getItems().add(edit_type);
+        tableView_Type.setContextMenu(type_context);
+
+
+        }
+
+
+
+
+    }
+
+

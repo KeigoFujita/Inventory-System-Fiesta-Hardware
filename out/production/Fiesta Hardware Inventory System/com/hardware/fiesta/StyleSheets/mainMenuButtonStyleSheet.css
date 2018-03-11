@@ -1,7 +1,6 @@
-
 .buttonStyle{
 
-    -fx-background-color:#00293c;
+        -fx-background-color:#00293c;
 }
 
 .buttonStyle:hover {
@@ -16,3 +15,12 @@
 
 
 }
+
+.button{
+
+    -fx-background-color:#00293c;
+    -fx-border-radius: 10;
+
+}
+
+

@@ -35,12 +35,12 @@
                   <Insets />
                </opaqueInsets>
                <children>
-                  <JFXButton prefWidth="70.0" style="-fx-background-color: teal;" text="Add" textFill="WHITE">
+                  <JFXButton onAction="#btAddAction" prefWidth="70.0" style="-fx-background-color: teal;" text="Add" textFill="WHITE">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </JFXButton>
-                  <JFXButton prefWidth="70.0" style="-fx-background-color: teal;" text="Edit" textFill="WHITE">
+                  <JFXButton onAction="#buttonEditAction" prefWidth="70.0" style="-fx-background-color: teal;" text="Edit" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>

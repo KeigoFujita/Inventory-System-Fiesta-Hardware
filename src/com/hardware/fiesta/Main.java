@@ -2,102 +2,82 @@ package com.hardware.fiesta;
 
 import com.hardware.fiesta.LoaderUI.UILoader;
 import javafx.application.Application;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 
 public class Main extends Application {
-    UILoader uiLoader;
+
 
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage){
 
-        uiLoader = new UILoader();
-
-        System.out.println(this.uiLoader+ "in Start method");
-
-        System.out.println(this.uiLoader.getMainMenuViewRootLayout());
-
-        Scene scene = new Scene(this.uiLoader.getMainMenuViewRootLayout());
-        this.uiLoader.getMainMenuController().setUiLoader(uiLoader);
-
-
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("FIESTA HARDWARE SYSTEM");
-        primaryStage.centerOnScreen();
+        UILoader uiLoader = new UILoader();
+        uiLoader.getLoginFormController().setUiLoader(uiLoader);
+        uiLoader.setLoginStage(primaryStage);
         primaryStage.show();
 
     }
+    public static void main(String[] args){
 
-    @Override
-    public void init() throws Exception {
-
-
-        System.out.println(uiLoader+ "in Init method");
-
-
-    }
-
-    public static void main(String[] args) {
-
-
-
-
-
-
-//        StockDatabaseConnector stdb = StockDatabaseConnector.getInstance();
-//        stdb.openConnection();
-
-
-//        StockCategory stockCategory = new StockCategory("Electric Tools");
-//        StockType   stockType  =  new StockType("Water Pipes");
-//        StockBrandName stockBrandName = new StockBrandName("Universal Robina");
-//        StockSupplier  stockSupplier  = new StockSupplier("Mark Galeen","Antipolo, City","09675671234","akosibaba@gmail.com");
-//
-//        if(stdb.addStockCategory(stockCategory)){
-//            System.out.println("Added Succesfully!!");
-//        }else{
-//            System.out.println("Item is already in the Database");
-//        }
-//
-//        if( stdb.addStockType(stockType)){
-//            System.out.println("Added Succesfully!!");
-//        }else{
-//            System.out.println("Item is already in the Database");
-//        }
-//
-//
-//        if( stdb.addStockBrandName(stockBrandName)){
-//            System.out.println("Added Succesfully!!");
-//        }else{
-//            System.out.println("Item is already in the Database");
-//        }
-//
-//        if( stdb.addStockSupplier(stockSupplier)){
-//            System.out.println("Added Succesfully!!");
-//        }else{
-//            System.out.println("Item is already in the Database");
-//        }
-
-//        StockSupplier stockSupplier = stdb.searchStockSupplier(3);
-//
-//        System.out.println(stockSupplier.getSupplierId());
-//        System.out.println(stockSupplier.getSupplierName());
-//        System.out.println(stockSupplier.getSupplierAddress());
-//        System.out.println(stockSupplier.getSupplierContactNumber());
-//        System.out.println(stockSupplier.getSupplierEmailAddress());
-//        System.out.println(stockSupplier.getSupplierStatus());
-
-
-//        stdb.closeConnection();
-//        System.exit(0);
 
         launch(args);
 
+
+//
+//
+//        final String USER_AGENT = "Mozilla/5.0";
+//
+//        String url = "https://smsgateway.me/api/v3/contacts/create";
+//
+//        URL obj = new URL(url);
+//        HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
+//
+//        //add reuqest header
+//        con.setRequestMethod("POST");
+//        con.setRequestProperty("User-Agent", USER_AGENT);
+//        con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+//
+//        String urlParameters = "email=keigofujita19@gmail.com&password=jklrsgang26&name=keigo&number=09126126901";
+//
+//        // Send post request
+//        con.setDoOutput(true);
+//        DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+//        wr.writeBytes(urlParameters);
+//        wr.flush();
+//        wr.close();
+//
+//        int responseCode = con.getResponseCode();
+//        System.out.println("\nSending 'POST' request to URL : " + url);
+//        System.out.println("Post parameters : " + urlParameters);
+//        System.out.println("Response Code : " + responseCode);
+//
+//        BufferedReader in = new BufferedReader(
+//                new InputStreamReader(con.getInputStream()));
+//        String inputLine;
+//        StringBuffer response = new StringBuffer();
+//
+//        while ((inputLine = in.readLine()) != null) {
+//            response.append(inputLine);
+//        }
+//        in.close();
+//
+//        //print result
+//        System.out.println(response.toString());
+//
+//
+//        XSSFWorkbook workbook = new XSSFWorkbook();
+//        XSSFSheet sheet = workbook.createSheet("Paksheet");
+//        XSSFRow row = sheet.createRow(0);
+//        XSSFCell cell = row.createCell(0);
+//        cell.setCellValue("Paksheet");
+//        workbook.write( new FileOutputStream(System.getProperty("user.home") + "\\Desktop\\"+"excel.xlsx"));
+//        workbook.close();
+//
+//        System.exit(0);
+
+
+
     }
-
-
-
 
 }

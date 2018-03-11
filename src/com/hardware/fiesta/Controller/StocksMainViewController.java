@@ -6,7 +6,7 @@ import com.jfoenix.controls.JFXComboBox;
 import javafx.fxml.FXML;
 import javafx.scene.layout.VBox;
 
-public class StocksTableViewController {
+public class StocksMainViewController {
 
 
     @FXML
@@ -20,7 +20,7 @@ public class StocksTableViewController {
 
     public void initialize(){
 
-        viewComboBox.getItems().addAll("Categories","Type","Brand Names","Suppliers");
+        viewComboBox.getItems().addAll("Stocks","Categories","Type","Brand Names","Suppliers");
 
     }
 
@@ -33,6 +33,7 @@ public class StocksTableViewController {
 
     public void setUILoader(UILoader uiLoader){
         this.uiLoader = uiLoader;
+        this.stdb = uiLoader.getStdb();
 
 
     }
@@ -42,9 +43,11 @@ public class StocksTableViewController {
         viewComboBox.setOnAction( e -> {
 
 
+            if(viewComboBox.getValue().equals("Stocks")){
 
+                displayTableItem();
 
-            if(viewComboBox.getValue().equals("Categories")){
+            }else if(viewComboBox.getValue().equals("Categories")){
 
                 displayTableCategories();
 
@@ -65,12 +68,24 @@ public class StocksTableViewController {
 
         });
 
-        viewComboBox.getSelectionModel().select("Categories");
+        viewComboBox.getSelectionModel().select("Stocks");
 
-        displayTableCategories();
+        displayTableItem();
 
     }
 
+
+    private void displayTableItem(){
+
+        this.uiLoader.getStockTableViewController().setUiLoader(this.uiLoader);
+        this.uiLoader.getStockTableViewController().displayData();
+
+        tableViewContainer.getChildren().clear();
+        tableViewContainer.getChildren().add(uiLoader.getStockItemTableViewRootLayout());
+
+
+
+    }
     private void displayTableCategories(){
 
         this.uiLoader.getStockCategorieController().setUiLoader(this.uiLoader);
@@ -109,10 +124,6 @@ public class StocksTableViewController {
 
     }
 
-
-    public void setStdb(StockDatabaseConnector stdb) {
-        this.stdb = stdb;
-    }
 
 
 }

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hardware.fiesta.Controller.UpdateItemController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="3.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="80.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="95.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" percentHeight="90.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+         <children>
+            <HBox alignment="CENTER" maxHeight="100.0" minHeight="80.0" prefWidth="200.0">
+               <children>
+                  <Label text="UPDATE ITEM">
+                     <font>
+                        <Font name="Rockwell" size="45.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox>
+               <children>
+                  <HBox alignment="TOP_CENTER" maxHeight="100.0" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="tf_itemName" focusColor="BLACK" labelFloat="true" maxWidth="250.0" minWidth="410.0" prefHeight="30.0" prefWidth="300.0" promptText="Item Name" unFocusColor="BLACK">
+                           <font>
+                              <Font name="Century Gothic Bold" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="lbl_namePromptText" text="Label" textFill="RED">
+                     <VBox.margin>
+                        <Insets left="20.0" top="-15.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <HBox alignment="TOP_CENTER" maxHeight="100.0" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <JFXComboBox fx:id="cb_cost" maxHeight="30.0" minWidth="100.0" prefHeight="0.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXComboBox>
+                        <JFXTextField fx:id="tf_itemCost" focusColor="BLACK" labelFloat="true" maxHeight="30.0" minWidth="300.0" promptText="Item Cost" unFocusColor="BLACK">
+                           <font>
+                              <Font name="Century Gothic Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="lbl_costPrompText" text="Label" textFill="RED">
+                     <VBox.margin>
+                        <Insets left="130.0" top="-15.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <HBox alignment="TOP_CENTER" maxHeight="100.0" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <JFXComboBox fx:id="cb_qty" maxHeight="30.0" minWidth="100.0" />
+                        <JFXTextField fx:id="tf_itemQty" focusColor="BLACK" labelFloat="true" maxHeight="30.0" minWidth="300.0" promptText="Item Quantity" unFocusColor="BLACK">
+                           <font>
+                              <Font name="Century Gothic Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="lbl_qtyPrompText" text="Label" textFill="RED">
+                     <VBox.margin>
+                        <Insets left="130.0" top="-15.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <HBox alignment="TOP_CENTER" maxHeight="100.0" prefHeight="50.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <JFXTextField fx:id="tf_ItemBarcode" focusColor="BLACK" labelFloat="true" maxHeight="30.0" maxWidth="300.0" minWidth="410.0" prefHeight="30.0" prefWidth="250.0" promptText="Item Barcode Id" unFocusColor="BLACK">
+                           <font>
+                              <Font name="Century Gothic Bold" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <Label fx:id="lbl_barcodePromptText" text="Label" textFill="RED">
+                     <VBox.margin>
+                        <Insets left="20.0" top="-15.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <HBox alignment="TOP_CENTER" maxHeight="100.0" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="tf_description" focusColor="BLACK" labelFloat="true" maxHeight="30.0" maxWidth="400.0" minWidth="410.0" prefWidth="400.0" promptText="Description" unFocusColor="BLACK">
+                           <font>
+                              <Font name="Century Gothic Bold" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="lbl_descriptionPromptText" text="Label" textFill="RED">
+                     <VBox.margin>
+                        <Insets left="20.0" top="-15.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+         <children>
+            <HBox alignment="CENTER_LEFT" maxHeight="100.0" minHeight="80.0" prefHeight="80.0" prefWidth="200.0" />
+            <VBox>
+               <children>
+                  <HBox maxHeight="100.0" prefHeight="50.0">
+                     <children>
+                        <JFXComboBox fx:id="cb_brand" labelFloat="true" minWidth="350.0" promptText="Brand Name" />
+                        <JFXButton fx:id="bt_addbrand" buttonType="RAISED" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#buttonAddBrandAction" style="-fx-background-color: transparent;" text="+">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="-10.0" top="-10.0" />
+                           </padding>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="lbl_brandPrompt" text="Label" textFill="RED">
+                     <VBox.margin>
+                        <Insets top="-20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox>
+               <children>
+                  <HBox maxHeight="100.0" prefHeight="50.0">
+                     <children>
+                        <JFXComboBox fx:id="cb_category" labelFloat="true" minWidth="350.0" promptText="Category">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXComboBox>
+                        <JFXButton fx:id="bt_addCategory" buttonType="RAISED" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#addCategoryAction" style="-fx-background-color: transparent;" text="+">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="-10.0" top="-10.0" />
+                           </padding>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="lbl_categoryPrompt" text="Label" textFill="RED">
+                     <VBox.margin>
+                        <Insets top="-20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox>
+               <children>
+                  <HBox maxHeight="100.0" prefHeight="50.0">
+                     <children>
+                        <JFXComboBox fx:id="cb_type" labelFloat="true" minWidth="350.0" promptText="Type">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXComboBox>
+                        <JFXButton fx:id="bt_addType" buttonType="RAISED" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#addTypeAction" style="-fx-background-color: transparent;" text="+">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="-10.0" top="-10.0" />
+                           </padding>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="lbl_typePrompt" text="Label" textFill="RED">
+                     <VBox.margin>
+                        <Insets top="-20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox>
+               <children>
+                  <HBox maxHeight="100.0" prefHeight="50.0">
+                     <children>
+                        <JFXComboBox fx:id="cb_supplier" labelFloat="true" minWidth="350.0" promptText="Supplier">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXComboBox>
+                        <JFXButton fx:id="bt_supplier" buttonType="RAISED" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" onAction="#addSupplierAction" style="-fx-background-color: transparent;" text="+">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="-10.0" top="-10.0" />
+                           </padding>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="lbl_supplierPrompt" text="Label" textFill="RED">
+                     <VBox.margin>
+                        <Insets top="-20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </VBox>
+            <JFXButton fx:id="bt_addItem" buttonType="RAISED" minHeight="50.0" minWidth="400.0" onAction="#addItemAction" style="-fx-background-color: #00293c;" text="Update Item" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</GridPane>

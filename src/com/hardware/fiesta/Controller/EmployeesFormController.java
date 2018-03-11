@@ -320,17 +320,10 @@ public class EmployeesFormController {
 
 
 
-   /*/
-   * Setters of this Class
-   * */
-    public void setEmdb(EmployeesDatabaseConnector emdb){
 
-        this.emdb = emdb;
-
-
-    }
     public void setUiLoader(UILoader uiLoader){
         this.uiLoader = uiLoader;
+        this.emdb = uiLoader.getEmdb();
         this.employeeInformationFormController = this.uiLoader.getEmployeeInformationFormController();
 
     }

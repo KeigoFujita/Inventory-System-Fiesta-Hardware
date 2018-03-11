@@ -126,12 +126,9 @@ public class AccountsFormController {
         }
     }
 
-   public void setEmdb(EmployeesDatabaseConnector emdb){
-        this.emdb = emdb;
-   }
    public void setUILoader(UILoader uiLoader){
         this.uiLoader = uiLoader;
-
+        this.emdb = uiLoader.getEmdb();
         this.employeeInformationViewRootLayout = uiLoader.getEmployeeInformationViewRootLayout();
         this.employeeInformationFormController = uiLoader.getEmployeeInformationFormController();
         this.mainView = uiLoader.getMainMenuController().mainViewContainer;

@@ -37,9 +37,27 @@ public class Account{
 
             }
         }
-
         public Account(){
 
+
+        }
+
+        public Account(String username, String password){
+
+            if(username.trim().isEmpty() && username.isEmpty() ||
+                    password.trim().isEmpty() && username.isEmpty()
+                    ){
+
+                this.username = null;
+                this.password = null;
+                this.type     = null;
+
+            }else{
+
+                this.username = new SimpleStringProperty(username.trim());
+                this.password = new SimpleStringProperty(encryptPassword(password.trim()));
+
+            }
         }
 
         public Account(int id, int empId, String username, String password, String type,String lastlogin, String status){

@@ -9,6 +9,8 @@ import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
+import javafx.scene.control.ContextMenu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -46,6 +48,12 @@ public class StockSupplierController {
 
     private static ObservableList<StockSupplier> stockSuppliers;
 
+
+    private ContextMenu supplier_context = new ContextMenu();
+
+    private MenuItem disable_supplier = new MenuItem("Disable Supplier");
+    private MenuItem enable_supplier = new MenuItem("Enable Supplier");
+    private MenuItem edit_supplier = new MenuItem("Edit Supplier");
 
 
     private StockDatabaseConnector stdb;
@@ -93,6 +101,7 @@ public class StockSupplierController {
         setNameInColumn();
         loadDataInObservableList();
         setDataOnColumn();
+        setContextMenuOnTableView();
 
     }
 
@@ -101,6 +110,7 @@ public class StockSupplierController {
         setNameInColumn();
         loadDataInObservableList();
         setDataOnColumn();
+        setContextMenuOnTableView();
 
         tableView_Suppliers.setItems(stockSuppliers);
 
@@ -135,14 +145,100 @@ public class StockSupplierController {
 
     }
 
-
-
-
     public void setUiLoader(UILoader uiLoader) {
         this.uiLoader = uiLoader;
         this.stdb = uiLoader.getStdb();
     }
 
+
+    public void btAddAction(){
+
+        uiLoader.getAddSupplierController().setUiLoader(this.uiLoader);
+        uiLoader.getAddSupplierController().setMode(uiLoader.getAddSupplierController().ADD_SUPPLIER_MODE);
+        uiLoader.getAddSupplierController().clearTextFields();
+        uiLoader.getAddSupplierController().tf_promptext.setText("");
+
+        uiLoader.getAddSupplierStage().setTitle("Add Supplier");
+        uiLoader.getAddSupplierStage().showAndWait();
+    }
+
+
+    public void buttonEditAction(){
+        StockSupplier stockSupplier = tableView_Suppliers.getSelectionModel().getSelectedItem();
+
+        if(stockSupplier!=null){
+
+            uiLoader.getAddSupplierController().setUiLoader(this.uiLoader);
+            uiLoader.getAddSupplierController().setMode(uiLoader.getAddSupplierController().UPDATE_SUPPLIER_MODE);
+            uiLoader.getAddSupplierController().setOldStockSupplier(stockSupplier);
+            uiLoader.getAddSupplierController().tf_promptext.setText("");
+
+
+            uiLoader.getAddSupplierStage().setTitle("Edit Supplier");
+            uiLoader.getAddSupplierStage().showAndWait();
+
+        }
+
+
+
+
+    }
+
+    private void setContextMenuOnTableView(){
+
+        disable_supplier.setOnAction(event -> {
+
+            stdb.openConnection();
+            StockSupplier stockSupplier = tableView_Suppliers.getSelectionModel().getSelectedItem();
+
+            if(stockSupplier!= null){
+
+                stdb.disableSupplier(stockSupplier);
+                stdb.closeConnection();
+                displayTableView();
+            }
+
+        });
+        enable_supplier.setOnAction(event -> {
+
+
+            stdb.openConnection();
+            StockSupplier stockSupplier = tableView_Suppliers.getSelectionModel().getSelectedItem();
+
+            if(stockSupplier!= null){
+
+                stdb.enableSupplier(stockSupplier);
+                stdb.closeConnection();
+                displayTableView();
+            }
+
+        });
+        edit_supplier.setOnAction(event -> {
+            StockSupplier stockSupplier = tableView_Suppliers.getSelectionModel().getSelectedItem();
+
+            if(stockSupplier!=null){
+
+                uiLoader.getAddSupplierController().setUiLoader(this.uiLoader);
+                uiLoader.getAddSupplierController().setMode(uiLoader.getAddSupplierController().UPDATE_SUPPLIER_MODE);
+                uiLoader.getAddSupplierController().setOldStockSupplier(stockSupplier);
+                uiLoader.getAddSupplierController().tf_promptext.setText("");
+
+
+                uiLoader.getAddSupplierStage().setTitle("Edit Supplier");
+                uiLoader.getAddSupplierStage().showAndWait();
+
+            }
+        });
+
+
+        supplier_context.getItems().add(disable_supplier);
+        supplier_context.getItems().add(enable_supplier);
+        supplier_context.getItems().add(edit_supplier);
+
+        tableView_Suppliers.setContextMenu(supplier_context);
+
+
+    }
 
 
 }

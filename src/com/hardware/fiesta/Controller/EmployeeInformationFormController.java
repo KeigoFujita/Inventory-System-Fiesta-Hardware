@@ -111,9 +111,7 @@ public class EmployeeInformationFormController {
     public void buttonManageAction(){
 
 
-
-        //Setting the Value to the Accounts Table View Given by the employee ID
-        accountsFormController.setEmdb(this.emdb);
+        accountsFormController.setUILoader(this.uiLoader);
         accountsFormController.displayAccounts(employee.getId());
 
 

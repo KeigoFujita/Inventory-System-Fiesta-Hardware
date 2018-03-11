@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="stockTableViewContainer" alignment="CENTER" prefWidth="1000.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hardware.fiesta.Controller.StocksTableViewController">
+<VBox fx:id="InventoryMainViewContainer" alignment="CENTER" prefWidth="1000.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hardware.fiesta.Controller.InventoryMainViewController">
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
          <children>

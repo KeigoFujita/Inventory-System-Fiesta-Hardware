@@ -61,7 +61,7 @@ public class AccountCreateFormController {
 
                 try {
 
-                if (!emdb.searchAccount(account)) {
+                if (emdb.searchAccount(username,password) < 0) {
 
                     emdb.addEmployee(employee);
                     emdb.addAccount(account, emdb.getEmployeeId(employee));

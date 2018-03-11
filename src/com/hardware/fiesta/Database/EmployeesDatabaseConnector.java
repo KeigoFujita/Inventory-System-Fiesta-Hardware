@@ -3,12 +3,11 @@ package com.hardware.fiesta.Database;
 import com.hardware.fiesta.Model.Account;
 import com.hardware.fiesta.Model.Employee;
 
+import java.sql.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-
-import java.sql.*;
 
 public class EmployeesDatabaseConnector {
 
@@ -589,32 +588,71 @@ public class EmployeesDatabaseConnector {
 
     }
 
-    public boolean searchAccount(Account account){
+    public int searchAccount(String username, String password){
 
         try {
             statement = conn.createStatement();
-            resultSet = statement.executeQuery("SELECT * FROM "+TABLE_ACCOUNTS);
+            resultSet = statement.executeQuery("SELECT "+ACCOUNT_ID +" , "+ ACCOUNT_USERNAME+" , "+ACCOUNT_PASSWORD+" FROM "+TABLE_ACCOUNTS);
 
             while(resultSet.next()){
 
-                String username = account.getUsername();
-                String password = account.getPassword();
-
                if(username.equals(resultSet.getString(ACCOUNT_USERNAME)) && password.equals(resultSet.getString(ACCOUNT_PASSWORD))) {
 
-                   return true;
+                   return resultSet.getInt(ACCOUNT_ID);
 
                }
 
             }
 
+            return -1;
+
         } catch (SQLException e) {
             e.printStackTrace();
+
+            return -1;
         }
 
 
-        return false;
     }
+
+    public Account searchAccount(int accountID){
+
+        try {
+            statement = conn.createStatement();
+            resultSet = statement.executeQuery("SELECT * FROM "+TABLE_ACCOUNTS+" WHERE "+ACCOUNT_ID+" = "+accountID);
+
+            Account account;
+
+            while(resultSet.next()){
+
+                account = new Account(
+
+                        resultSet.getInt(ACCOUNT_ID),
+                        resultSet.getInt(ACCOUNT_EMPLOYEE_ID),
+                        resultSet.getString(ACCOUNT_USERNAME),
+                        resultSet.getString(ACCOUNT_PASSWORD),
+                        resultSet.getString(ACCOUNT_TYPE),
+                        resultSet.getString(ACCOUNT_LAST_LOGIN),
+                        resultSet.getString(ACCOUNT_STATUS)
+
+                );
+                return account;
+
+            }
+
+            return null;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+            return null;
+        }
+
+
+    }
+
+
+
 
     public boolean updateAccount(Account oldAccount, Account newAccount){
 

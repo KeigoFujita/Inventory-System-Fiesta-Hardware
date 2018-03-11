@@ -9,6 +9,9 @@ import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
+import javafx.scene.control.ContextMenu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -35,6 +38,13 @@ public class StockCategorieController {
     private TableColumn<StockCategory, String> tc_categoryStatus;
 
     private static ObservableList<StockCategory> stockCategories;
+
+
+    private ContextMenu category_context = new ContextMenu();
+
+    private MenuItem disable_category = new MenuItem("Disable Category");
+    private MenuItem enable_category = new MenuItem("Enable Category");
+    private MenuItem edit_category   = new MenuItem("Edit Category");
 
     private StockDatabaseConnector stdb;
     private UILoader uiLoader;
@@ -82,6 +92,7 @@ public class StockCategorieController {
         setNameInColumn();
         loadDataInObservableList();
         setDataOnColumn();
+        setContextMenuOnTableView();
 
         tableView_Category.setItems(this.stockCategories);
 
@@ -92,6 +103,7 @@ public class StockCategorieController {
         setNameInColumn();
         loadDataInObservableList();
         setDataOnColumn();
+        setContextMenuOnTableView();
 
         tableView_Category.setItems(stockCategories);
 
@@ -119,7 +131,7 @@ public class StockCategorieController {
 
             // search in Names
 
-            String lowerCaseFilter = newValue.toLowerCase();
+            String lowerCaseFilter = newValue.toLowerCase().trim();
 
             return stockCategory.getCategoryName().toLowerCase().contains(lowerCaseFilter);
 
@@ -133,10 +145,115 @@ public class StockCategorieController {
 
     public void buttonAddAction(){
 
+        uiLoader.getAddStockCategoryController().setUiLoader(this.uiLoader);
+        uiLoader.getAddStockCategoryController().tf_CategoryName.setAlignment(Pos.CENTER);
+        uiLoader.getAddStockCategoryController().tf_CategoryName.setText("");
+        uiLoader.getAddStockCategoryController().bt_addButton.setText("Add");
+        uiLoader.getAddStockCategoryController().tf_prompText.setText("");
 
         uiLoader.getAddStockCategoryStage().setTitle("Add Category");
         uiLoader.getAddStockCategoryStage().showAndWait();
 
+        displayTableView();
+
+
     }
+
+    public void buttonEditAction(){
+
+        StockCategory stockCategory = tableView_Category.getSelectionModel().getSelectedItem();
+
+        if(stockCategory!=null){
+
+            this.uiLoader.getAddStockCategoryController().setUiLoader(this.uiLoader);
+            this.uiLoader.getAddStockCategoryController().tf_CategoryName.setAlignment(Pos.CENTER);
+            this.uiLoader.getAddStockCategoryController().tf_prompText.setText("");
+            this.uiLoader.getAddStockCategoryController().setOldStockCategory(stockCategory);
+            this.uiLoader.getAddStockCategoryController().bt_addButton.setText("Update Data");
+            this.uiLoader.getAddStockCategoryController().tf_CategoryName.setText(stockCategory.getCategoryName());
+
+            uiLoader.getAddStockCategoryStage().setTitle("Update Data");
+            uiLoader.getAddStockCategoryStage().showAndWait();
+
+            displayTableView();
+
+        }
+
+
+
+
+
+
+
+
+    }
+
+
+    private void setContextMenuOnTableView(){
+
+        disable_category.setOnAction(event -> {
+
+            stdb.openConnection();
+            StockCategory  stockCategory = tableView_Category.getSelectionModel().getSelectedItem();
+
+            if(stockCategory!= null){
+
+                stdb.disableCategory(stockCategory);
+                stdb.closeConnection();
+                displayTableView();
+            }
+
+        });
+        enable_category.setOnAction(event -> {
+
+            stdb.openConnection();
+            StockCategory  stockCategory = tableView_Category.getSelectionModel().getSelectedItem();
+
+            if(stockCategory!= null){
+
+                stdb.enableCategory(stockCategory);
+                stdb.closeConnection();
+                displayTableView();
+            }
+
+        });
+        edit_category.setOnAction(event -> {
+
+            StockCategory stockCategory = tableView_Category.getSelectionModel().getSelectedItem();
+
+            if(stockCategory!=null){
+
+                this.uiLoader.getAddStockCategoryController().setUiLoader(this.uiLoader);
+                this.uiLoader.getAddStockCategoryController().tf_CategoryName.setAlignment(Pos.CENTER);
+                this.uiLoader.getAddStockCategoryController().tf_CategoryName.setText(stockCategory.getCategoryName());
+                this.uiLoader.getAddStockCategoryController().tf_prompText.setText("");
+                this.uiLoader.getAddStockCategoryController().setOldStockCategory(stockCategory);
+                this.uiLoader.getAddStockCategoryController().bt_addButton.setText("Update Data");
+
+
+                uiLoader.getAddStockCategoryStage().setTitle("Update Data");
+                uiLoader.getAddStockCategoryStage().showAndWait();
+
+                displayTableView();
+
+            }
+
+
+        });
+
+
+        category_context.getItems().add(disable_category);
+        category_context.getItems().add(enable_category);
+        category_context.getItems().add(edit_category);
+
+        tableView_Category.setContextMenu(category_context);
+
+
+    }
+
+
+
+
+
 
 }

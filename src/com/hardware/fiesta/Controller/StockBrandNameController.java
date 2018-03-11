@@ -9,6 +9,8 @@ import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
+import javafx.scene.control.ContextMenu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -36,6 +38,11 @@ public class StockBrandNameController {
     private TableColumn<StockBrandName, String> tc_brandStatus;
 
 
+    private ContextMenu brand_context = new ContextMenu();
+
+    private MenuItem disable_brand = new MenuItem("Disable Brand");
+    private MenuItem enable_brand= new MenuItem("Enable Brand");
+    private MenuItem edit_brand =  new MenuItem("Edit Brand");
 
     private static ObservableList<StockBrandName> stockBrandNames;
 
@@ -53,6 +60,7 @@ public class StockBrandNameController {
 
     public void setNameInColumn(){
 
+        System.out.println(stdb);
         stdb.openConnection();
         ArrayList<String> columnNames = stdb.getStockBrandNamesColumnName();
         stdb.closeConnection();
@@ -90,6 +98,7 @@ public class StockBrandNameController {
     public void setUiLoader(UILoader uiLoader) {
         this.uiLoader = uiLoader;
         this.stdb = uiLoader.getStdb();
+        setContextMenuOnTableView();
     }
 
     public void displayTableView(ObservableList<StockBrandName> stockBrandNames){
@@ -97,6 +106,7 @@ public class StockBrandNameController {
         setNameInColumn();
         loadDataInObservableList();
         setDataOnColumn();
+        setContextMenuOnTableView();
 
         tableView_BrandName.setItems(stockBrandNames);
 
@@ -131,11 +141,93 @@ public class StockBrandNameController {
 
     public void buttonAddAction(){
 
+        uiLoader.getAddBrandController().setUiLoader(this.uiLoader);
+        uiLoader.getAddBrandController().bt_addButton.setText("Add");
+        uiLoader.getAddBrandController().tf_BrandName.setText("");
+        uiLoader.getAddBrandController().lbl_prompText.setText("");
 
-        uiLoader.getAddStockBrandStage().setTitle("Add Category");
+        uiLoader.getAddStockBrandStage().setTitle("Add Brand Name");
         uiLoader.getAddStockBrandStage().showAndWait();
 
     }
 
+
+    public void buttonEditAction(){
+
+        StockBrandName stockBrandName = tableView_BrandName.getSelectionModel().getSelectedItem();
+
+        if(stockBrandName!=null){
+
+            uiLoader.getAddBrandController().setUiLoader(this.uiLoader);
+            uiLoader.getAddBrandController().setOldStockBrandName(stockBrandName);
+            uiLoader.getAddBrandController().bt_addButton.setText("Update Data");
+            uiLoader.getAddBrandController().tf_BrandName.setText(stockBrandName.getBrandName());
+            uiLoader.getAddBrandController().lbl_prompText.setText("");
+
+            uiLoader.getAddStockBrandStage().setTitle("Update Brand Name");
+            uiLoader.getAddStockBrandStage().showAndWait();
+
+
+        }
+    }
+
+    private void setContextMenuOnTableView(){
+
+        disable_brand.setOnAction(event -> {
+
+            stdb.openConnection();
+            StockBrandName stockBrandName = tableView_BrandName.getSelectionModel().getSelectedItem();
+
+            if(stockBrandName!= null){
+
+                stdb.disableBrand(stockBrandName);
+                stdb.closeConnection();
+                displayTableView();
+            }
+
+        });
+        enable_brand.setOnAction(event -> {
+
+            stdb.openConnection();
+            StockBrandName stockBrandName = tableView_BrandName.getSelectionModel().getSelectedItem();
+
+            if(stockBrandName!= null){
+
+                stdb.enableBrand(stockBrandName);
+                stdb.closeConnection();
+                displayTableView();
+            }
+
+        });
+
+        edit_brand.setOnAction(event -> {
+
+            StockBrandName stockBrandName = tableView_BrandName.getSelectionModel().getSelectedItem();
+
+            if(stockBrandName!=null){
+
+                uiLoader.getAddBrandController().setUiLoader(this.uiLoader);
+                uiLoader.getAddBrandController().setOldStockBrandName(stockBrandName);
+                uiLoader.getAddBrandController().bt_addButton.setText("Update Data");
+                uiLoader.getAddBrandController().tf_BrandName.setText(stockBrandName.getBrandName());
+                uiLoader.getAddBrandController().lbl_prompText.setText("");
+
+                uiLoader.getAddStockBrandStage().setTitle("Update Brand Name");
+                uiLoader.getAddStockBrandStage().showAndWait();
+
+
+            }
+
+        });
+
+
+        brand_context.getItems().add(disable_brand);
+        brand_context.getItems().add(enable_brand);
+        brand_context.getItems().add(edit_brand);
+
+        tableView_BrandName.setContextMenu(brand_context);
+
+
+    }
 
 }

@@ -21,6 +21,18 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
   <component name="DebuggerManager">
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
       <breakpoint>
@@ -67,149 +79,118 @@
       <file leaf-file-name="StockDatabaseConnector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Database/StockDatabaseConnector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="263" column="38" lean-forward="false" selection-start-line="263" selection-start-column="38" selection-end-line="263" selection-end-column="38" />
+            <state relative-caret-position="170">
+              <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="112" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#getInstance#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#openConnection#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#closeConnection#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#setPragmakeysOn#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#addReplenish#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#updateInventory#1;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#getInventoryId#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#addItem#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#addStockCategory#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#addStockType#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#addStockBrandName#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#addStockSupplier#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#disableItem#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#enableItem#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#disableCategory#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#enableCategory#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#disableType#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#enableType#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#disableBrand#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#enableBrand#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#disableSupplier#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#enableSupplier#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#updateItem#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#updateCategory#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#updateType#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#updateBrandName#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#updateSupplier#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#validateStockItemName#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#validateStockItemBarcode#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#validateStockCategory#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#validateStockType#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#validateStockBrandName#0;class#StockDatabaseConnector#0" expanded="false" />
-                <element signature="method#validateStockSupplier#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#validateSupplierName#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#validateSupplierContact#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#validateSupplierEmail#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#getItemId#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#getItemName#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#searchStockCategory#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#searchStockType#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#searchStockBrandName#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#searchStockSupplier#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#searchStockCategory#1;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#searchStockType#1;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#searchStockBrandName#1;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#searchStockSupplier#1;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#getStockCategoryList#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#getStockTypeList#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#getStockBrandNameList#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#getStockSupplierList#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#getItemList#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#getStockCategoryList#1;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#getStockTypeList#1;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#getStockBrandNameList#1;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#getStockSupplierList#1;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#getReplenishmentList#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#getInventoryList#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#getStockItemColumnName#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#getStockSuppliersColumnName#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#getStockCategoriesColumnName#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#getStockTypesColumnName#0;class#StockDatabaseConnector#0" expanded="false" />
                 <element signature="method#getStockBrandNamesColumnName#0;class#StockDatabaseConnector#0" expanded="false" />
-                <marker date="1519930112960" expanded="true" signature="3194:4250" ph="CREATE TABLE... IF" />
-                <marker date="1519930112960" expanded="true" signature="4353:4698" ph="CREATE TABLE... IF" />
-                <marker date="1519930112960" expanded="true" signature="4791:5108" ph="CREATE TABLE... IF" />
-                <marker date="1519930112960" expanded="true" signature="5186:5527" ph="CREATE TABLE... IF" />
-                <marker date="1519930112960" expanded="true" signature="5632:6160" ph="CREATE TABLE... IF" />
-                <marker date="1519930112960" expanded="true" signature="6271:6362" ph="INSERT INTO Categories... " />
-                <marker date="1519930112960" expanded="true" signature="6464:6562" ph="INSERT INTO Types... " />
-                <marker date="1519930112960" expanded="true" signature="6672:6782" ph="INSERT INTO BrandNames... " />
-                <marker date="1519930112960" expanded="true" signature="6893:7212" ph="INSERT INTO Suppliers... " />
-                <marker date="1519930112960" expanded="false" signature="38116:38126" ph="&lt;~&gt;" />
-                <marker date="1519930112960" expanded="false" signature="41967:41976" ph="&lt;~&gt;" />
+                <element signature="method#getInventoryColumnName#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#getReplenishColumnName#0;class#StockDatabaseConnector#0" expanded="false" />
+                <element signature="method#getSalesColumnName#0;class#StockDatabaseConnector#0" expanded="false" />
+                <marker date="1520541069046" expanded="true" signature="190:10240" ph="..." />
+                <marker date="1520541069046" expanded="true" signature="10359:10710" ph="INSERT INTO Inventory... " />
+                <marker date="1520541069046" expanded="true" signature="10359:10712" ph="INSERT INTO Inventory... " />
+                <marker date="1520541069046" expanded="true" signature="10359:10841" ph="INSERT INTO Inventory... " />
+                <marker date="1520541069046" expanded="true" signature="10956:11372" ph="INSERT INTO Sales... " />
+                <marker date="1520541069046" expanded="true" signature="11506:11957" ph="INSERT INTO StockReplenishment... " />
+                <marker date="1520541069046" expanded="true" signature="12064:12718" ph="INSERT INTO Stocks... " />
+                <marker date="1520541069046" expanded="true" signature="12834:12925" ph="INSERT INTO Categories... " />
+                <marker date="1520541069046" expanded="true" signature="13027:13125" ph="INSERT INTO Types... " />
+                <marker date="1520541069046" expanded="true" signature="13235:13345" ph="INSERT INTO BrandNames... " />
+                <marker date="1520541069046" expanded="true" signature="13456:13775" ph="INSERT INTO Suppliers... " />
+                <marker date="1520541069046" expanded="true" signature="13887:14008" ph="UPDATE Stocks... " />
+                <marker date="1520541069046" expanded="true" signature="14119:14239" ph="UPDATE Stocks... " />
+                <marker date="1520541069046" expanded="true" signature="14360:14479" ph="UPDATE Categories... " />
+                <marker date="1520541069046" expanded="true" signature="14594:14728" ph="UPDATE Categories... " />
+                <marker date="1520541069046" expanded="true" signature="14837:14959" ph="UPDATE Types... " />
+                <marker date="1520541069046" expanded="true" signature="15064:15185" ph="UPDATE Types... " />
+                <marker date="1520541069046" expanded="true" signature="15297:15437" ph="UPDATE BrandNames... " />
+                <marker date="1520541069046" expanded="true" signature="15545:15684" ph="UPDATE BrandNames... " />
+                <marker date="1520541069046" expanded="true" signature="15802:15936" ph="UPDATE Suppliers... " />
+                <marker date="1520541069046" expanded="true" signature="16050:16183" ph="UPDATE Suppliers... " />
+                <marker date="1520541069046" expanded="true" signature="16294:16918" ph="UPDATE Stocks... " />
+                <marker date="1520541069046" expanded="true" signature="17038:17159" ph="UPDATE Categories... " />
+                <marker date="1520541069046" expanded="true" signature="17271:17395" ph="UPDATE Types... " />
+                <marker date="1520541069046" expanded="true" signature="17511:17653" ph="UPDATE BrandNames... " />
+                <marker date="1520541069046" expanded="true" signature="17778:18131" ph="UPDATE Suppliers... " />
+                <marker date="1520541069046" expanded="true" signature="22171:22339" ph="UPDATE Inventory... " />
+                <marker date="1520541069046" expanded="true" signature="22171:22369" ph="UPDATE Inventory... " />
+                <marker date="1520541069046" expanded="true" signature="22171:22370" ph="UPDATE Inventory... " />
+                <marker date="1520541069046" expanded="true" signature="22171:22411" ph="UPDATE Inventory... " />
+                <marker date="1520541069046" expanded="true" signature="22171:22412" ph="UPDATE Inventory... " />
+                <marker date="1520541069046" expanded="true" signature="63976:63990" ph="SELECT * FRO... Sales" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StocksTableViewController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StocksTableViewController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="929">
-              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#displayTableCategories#0;class#StocksTableViewController#0" expanded="false" />
-                <element signature="method#displayTableTypes#0;class#StocksTableViewController#0" expanded="false" />
-                <element signature="method#displayTableStockSuppliers#0;class#StocksTableViewController#0" expanded="false" />
-                <element signature="method#displayTableBrandNames#0;class#StocksTableViewController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UILoader.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/LoaderUI/UILoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1018">
-              <caret line="128" column="87" lean-forward="false" selection-start-line="128" selection-start-column="87" selection-end-line="128" selection-end-column="87" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#8703#8704#0" expanded="true" />
-                <element signature="e#8748#8749#0" expanded="true" />
-                <element signature="e#8805#8806#0" expanded="true" />
-                <element signature="e#8846#8847#0" expanded="true" />
-                <element signature="method#getEmployeeInformationFormController#0;class#UILoader#0" expanded="false" />
-                <element signature="e#10651#10652#0" expanded="true" />
-                <element signature="e#10699#10700#0" expanded="true" />
-                <element signature="e#11572#11573#0" expanded="true" />
-                <element signature="e#11599#11600#0" expanded="true" />
-                <element signature="e#11646#11647#0" expanded="true" />
-                <element signature="e#11673#11674#0" expanded="true" />
-                <element signature="e#11954#11955#0" expanded="true" />
-                <element signature="e#12003#12004#0" expanded="true" />
-                <element signature="e#12050#12051#0" expanded="true" />
-                <element signature="e#12094#12095#0" expanded="true" />
-                <element signature="e#12137#12138#0" expanded="true" />
-                <element signature="e#12177#12178#0" expanded="true" />
-                <element signature="e#12221#12222#0" expanded="true" />
-                <element signature="e#12262#12263#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StockTypeController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StockTypeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="128" column="39" lean-forward="false" selection-start-line="128" selection-start-column="39" selection-end-line="128" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#displayTableView#1;class#StockTypeController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StockBrandNameController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StockBrandNameController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="135" column="40" lean-forward="false" selection-start-line="135" selection-start-column="40" selection-end-line="135" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeesFormController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/EmployeesFormController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="176" column="55" lean-forward="true" selection-start-line="176" selection-start-column="7" selection-end-line="176" selection-end-column="55" />
-              <folding>
-                <element signature="method#setDataOnColumn#0;class#EmployeesFormController#0" expanded="false" />
-                <element signature="method#setContextMenuOnTableView#0;class#EmployeesFormController#0" expanded="false" />
-                <element signature="method#setActionOnDoubleClickOnTableRow#0;class#EmployeesFormController#0" expanded="false" />
-                <element signature="method#viewEmployee#0;class#EmployeesFormController#0" expanded="false" />
-                <element signature="method#disableEmployee#0;class#EmployeesFormController#0" expanded="false" />
-                <element signature="method#enableEmployee#0;class#EmployeesFormController#0" expanded="false" />
-                <element signature="method#setEmdb#0;class#EmployeesFormController#0" expanded="false" />
-                <element signature="method#setUiLoader#0;class#EmployeesFormController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="187">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -235,6 +216,14 @@
       <find>settingsAc</find>
       <find>#fcvf</find>
       <find>setPRagma</find>
+      <find>addSales</find>
+      <find>getSal</find>
+      <find>AD</find>
+      <find>ADD_SALE</find>
+      <find>addSal</find>
+      <find>dashBoar</find>
+      <find>dashBoard</find>
+      <find>getDas</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -257,57 +246,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/StyleSheets/keigo.css" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/dashboardForm.fxml" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/AccountsTableView.fxml" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AccountRenameFormController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/mainMenuController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/EmployeeFormController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/EmployeeTableView.fxml" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/EmployeeTableViewController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/LoginFormController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/RegisterFormController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AccountCreateFormController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/employeeContextMenu.fxml" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/EmployeeContextMenuController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/StyleSheets/employeeInformationStylesheet.css" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/updateEmployeeFormController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/updateEmployeeForm.fxml" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/DashboardFormController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/UpdateEmployeeInformationController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/UpdateEmployeeIController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/EmployeesForm.fxml" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/mainMenu.fxml" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/Controller.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Model/Employee.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/UpdateAccountForm.fxml" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Database/EmployeesDatabaseConnector.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Model/Account.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/UpdateAccountController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Model/StockCategory.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Model/StockType.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Model/StockBrandName.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Model/StockSupplier.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/StyleSheets/mainMenuButtonStyleSheet.css" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/EmployeeInformationFormController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AccountsFormController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/EmployeesFormController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StockCategoryTableViewController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/StockCategoriesTableView.fxml" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/TableViewStockCategories.fxml" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/StocksTableView.fxml" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/TableViewStockTypes.fxml" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/TableViewStockBrandNames.fxml" />
         <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/TableViewStockSuppliers.fxml" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/MainMenuController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Database/StockDatabaseConnector.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StockSupplierController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StocksTableViewController.java" />
-        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Main.java" />
         <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StockCategorieController.java" />
         <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StockTypeController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StockSupplierController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/AddItemForm.fxml" />
         <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StockBrandNameController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/StockTableView.fxml" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/UpdateItemForm.fxml" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AddSupplierController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AddBrandController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AddStockCategoryController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AddStockTypeController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/DiableItemController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/DisableItemForm.fxml" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StocksMainViewController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/EmployeesFormController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AccountsFormController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Database/EmployeesDatabaseConnector.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AccountCreateFormController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/DisableItemController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/EmployeeInformationFormController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Model/Account.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/UpdateAccountController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/LoginFormController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/InventoryMainView.fxml" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/InventoryTableViewForm.fxml" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/ReplenishmentForm.fxml" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/SalesTableViewForm.fxml" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/mainMenu.fxml" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/UpdateItemController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/ReplenishPromptForm.fxml" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Model/StockItem.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Model/StockReplenishment.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/ReplenishmentFormController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/InventoryMainViewController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/InventoryTableVIewController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/DeductItemQtyForm.fxml" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/ReplenishPromptFormController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StockTableViewController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AddItemController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Model/Inventory.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/DeductItemQtyFormController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Model/Sales.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Database/StockDatabaseConnector.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/SalesTableViewController.java" />
         <option value="$PROJECT_DIR$/src/com/hardware/fiesta/LoaderUI/UILoader.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/UI/dashboardForm.fxml" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/DashboardFormController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/StyleSheets/mainMenuButtonStyleSheet.css" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Controller/MainMenuController.java" />
+        <option value="$PROJECT_DIR$/src/com/hardware/fiesta/Main.java" />
       </list>
     </option>
   </component>
@@ -324,10 +313,11 @@
     </treeState>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="219" />
-    <option name="width" value="897" />
-    <option name="height" value="563" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="262" />
+    <option name="y" value="27" />
+    <option name="width" value="986" />
+    <option name="height" value="587" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -364,9 +354,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -390,13 +379,6 @@
               <item name="Fiesta-Hardware-Inventory-System" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="fiesta" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fiesta-Hardware-Inventory-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fiesta-Hardware-Inventory-System" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fiesta" type="462c0819:PsiDirectoryNode" />
               <item name="Database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -408,30 +390,14 @@
             </path>
             <path>
               <item name="Fiesta-Hardware-Inventory-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fiesta-Hardware-Inventory-System" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fiesta" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fiesta-Hardware-Inventory-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fiesta-Hardware-Inventory-System" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fiesta" type="462c0819:PsiDirectoryNode" />
-              <item name="StyleSheets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Fiesta-Hardware-Inventory-System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fiesta-Hardware-Inventory-System" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fiesta" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -449,9 +415,10 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../sqlite-jdbc-3.21.0.jar!/" />
-    <property name="SearchEverywhereHistoryKey" value="closeConn&#9;PSI&#9;JAVA://com.hardware.fiesta.Database.AccountDatabaseConnection#closeConnection" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../poi-3.17/xmlbeans-2.6.0.jar!/" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/aircellozano/Desktop/Fiesta Hardware Inventory System/Fiesta-Hardware-Inventory-System/src/com/hardware/fiesta/Database/StockDatabaseConnector.java&#10;closeConn&#9;PSI&#9;JAVA://com.hardware.fiesta.Database.AccountDatabaseConnection#closeConnection" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -605,36 +572,55 @@
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1519913199749" duration="23447000" />
+      <workItem from="1519969007040" duration="3533000" />
+      <workItem from="1520095874000" duration="2886000" />
+      <workItem from="1520146315296" duration="12263000" />
+      <workItem from="1520180965315" duration="6034000" />
+      <workItem from="1520232033416" duration="40757000" />
+      <workItem from="1520319999165" duration="10730000" />
+      <workItem from="1520341136125" duration="14476000" />
+      <workItem from="1520405933717" duration="4430000" />
+      <workItem from="1520489206883" duration="7476000" />
+      <workItem from="1520503964196" duration="34633000" />
+      <workItem from="1520578338384" duration="2935000" />
+      <workItem from="1520585325736" duration="1213000" />
+      <workItem from="1520587922596" duration="710000" />
+      <workItem from="1520612984208" duration="6344000" />
+      <workItem from="1520635724206" duration="9963000" />
+      <workItem from="1520695313453" duration="86000" />
+      <workItem from="1520752459621" duration="8119000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24749000" />
+    <option name="totallyTimeSpent" value="191337000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31703705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31587058" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32740742" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25777778" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33744222" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23420647" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19180088" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31316188" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24971624" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39940387" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -642,43 +628,44 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="584" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32740742" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24971624" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39940387" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31703705" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31594634" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="584" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25777778" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25633383" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19180088" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24231333" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -700,7 +687,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="29" />
+      <option name="time" value="81" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -709,11 +696,165 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Model/Model.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/UpdateItemForm.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="238">
+          <caret line="14" column="275" lean-forward="false" selection-start-line="14" selection-start-column="275" selection-end-line="14" selection-end-column="275" />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AddStockCategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="55" column="69" lean-forward="false" selection-start-line="55" selection-start-column="69" selection-end-line="55" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AddSupplierController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="140" column="77" lean-forward="false" selection-start-line="140" selection-start-column="77" selection-end-line="140" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AddStockTypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="56" column="73" lean-forward="false" selection-start-line="56" selection-start-column="73" selection-end-line="56" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AddBrandController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="60" column="73" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/javafx.graphics/javafx/stage/Modality.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-59">
+          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/javafx.graphics/javafx/stage/StageStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/DisableItemForm.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="65" lean-forward="true" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/EmployeesFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3663">
+          <caret line="325" column="39" lean-forward="false" selection-start-line="325" selection-start-column="39" selection-end-line="325" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AccountCreateFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="63" column="59" lean-forward="false" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AccountsFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/EmployeeInformationFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="113" column="56" lean-forward="false" selection-start-line="113" selection-start-column="56" selection-end-line="113" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/DisableItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="88" column="29" lean-forward="false" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Model/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="60" column="9" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="60" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/UpdateAccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="75" column="44" lean-forward="false" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/InventoryMainView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="227" lean-forward="false" selection-start-line="9" selection-start-column="227" selection-end-line="9" selection-end-column="227" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/InventoryTableViewForm.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="298" lean-forward="false" selection-start-line="13" selection-start-column="298" selection-end-line="13" selection-end-column="298" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/ReplenishmentForm.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="297" lean-forward="false" selection-start-line="13" selection-start-column="297" selection-end-line="13" selection-end-column="297" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/SalesTableViewForm.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="294" lean-forward="false" selection-start-line="13" selection-start-column="294" selection-end-line="13" selection-end-column="294" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/mainMenu.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="166" column="49" lean-forward="false" selection-start-line="166" selection-start-column="49" selection-end-line="166" selection-end-column="49" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Model/Item.java">
@@ -723,334 +864,236 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Model/HandTools.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/UpdateItemController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="294">
+          <caret line="518" column="25" lean-forward="false" selection-start-line="518" selection-start-column="25" selection-end-line="518" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Model/Paint.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/ReplenishPromptForm.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="221">
+          <caret line="13" column="283" lean-forward="false" selection-start-line="13" selection-start-column="283" selection-end-line="13" selection-end-column="283" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.sql/java/sql/PreparedStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="95" column="8" lean-forward="false" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Model/AdminLog.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/InventoryMainViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Model/StockItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1921">
+          <caret line="163" column="54" lean-forward="false" selection-start-line="163" selection-start-column="54" selection-end-line="163" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Model/StockReplenishment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/DeductItemQtyForm.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="61" column="98" lean-forward="false" selection-start-line="61" selection-start-column="72" selection-end-line="61" selection-end-column="98" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/InventoryTableVIewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AddItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="461" column="29" lean-forward="true" selection-start-line="461" selection-start-column="29" selection-end-line="461" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StockTableViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="278" column="0" lean-forward="false" selection-start-line="278" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Model/Inventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/ReplenishPromptFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="69" column="25" lean-forward="false" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/Math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="738" column="23" lean-forward="false" selection-start-line="738" selection-start-column="23" selection-end-line="738" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/DeductItemQtyFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="67" column="40" lean-forward="false" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StocksMainViewController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Model/ElectricTools.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Model/Sales.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/updateEmployeeForm.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="156" column="19" lean-forward="false" selection-start-line="156" selection-start-column="19" selection-end-line="156" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/DashboardFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/EmployeeInformationForm.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="228" column="70" lean-forward="false" selection-start-line="228" selection-start-column="70" selection-end-line="228" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/UpdateEmployeeIController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        <state relative-caret-position="1105">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding>
-            <element signature="method#setUiLoader#0;class#UpdateEmployeeIController#0" expanded="false" />
-            <element signature="method#setEmployee#0;class#UpdateEmployeeIController#0" expanded="false" />
+            <element signature="e#1617#1618#0" expanded="false" />
+            <element signature="e#1653#1654#0" expanded="false" />
+            <element signature="e#1694#1695#0" expanded="false" />
+            <element signature="e#1739#1740#0" expanded="false" />
+            <element signature="e#1776#1777#0" expanded="false" />
+            <element signature="e#1816#1817#0" expanded="false" />
+            <element signature="e#1851#1852#0" expanded="false" />
+            <element signature="e#1889#1890#0" expanded="false" />
+            <element signature="e#2020#2021#0" expanded="false" />
+            <element signature="e#2063#2064#0" expanded="false" />
+            <element signature="e#2123#2124#0" expanded="false" />
+            <element signature="e#2160#2161#0" expanded="false" />
+            <element signature="e#2220#2221#0" expanded="false" />
+            <element signature="e#2275#2276#0" expanded="false" />
+            <element signature="e#2323#2324#0" expanded="false" />
+            <element signature="e#2389#2390#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/accountCreateForm.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="58" column="63" lean-forward="true" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/mainMenu.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/EmployeesForm.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="65" column="97" lean-forward="false" selection-start-line="65" selection-start-column="97" selection-end-line="65" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Model/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-41">
-          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/StyleSheets/employeeInformationStylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/SalesTableViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1237">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Database/EmployeesDatabaseConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/ReplenishmentFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="65" column="82" lean-forward="false" selection-start-line="65" selection-start-column="67" selection-end-line="65" selection-end-column="82" />
+          <folding>
+            <element signature="method#loadDataInObservableList#0;class#ReplenishmentFormController#0" expanded="false" />
+            <element signature="method#setNamesInColumns#0;class#ReplenishmentFormController#0" expanded="false" />
+            <element signature="method#displayDataInTableView#0;class#ReplenishmentFormController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/LoginFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/UpdateAccountForm.fxml">
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/dashboardForm.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="69" lean-forward="false" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Model/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="e#528#529#0" expanded="false" />
-            <element signature="e#595#596#0" expanded="false" />
-            <element signature="method#encryptPassword#0;class#Account#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/UpdateAccountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setDataOnUI#0;class#UpdateAccountController#0" expanded="false" />
-            <element signature="method#buttonUpdateAccountAction#0;class#UpdateAccountController#0" expanded="false" />
-            <element signature="method#buttonReEnterPasswordAction#0;class#UpdateAccountController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Database/AccountDatabaseConnection.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.sql/java/sql/Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="263" column="9" lean-forward="false" selection-start-line="263" selection-start-column="9" selection-end-line="263" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Model/StockType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="50" lean-forward="false" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#594#595#0" expanded="false" />
-            <element signature="e#660#661#0" expanded="false" />
-            <element signature="e#691#692#0" expanded="false" />
-            <element signature="e#726#727#0" expanded="false" />
-            <element signature="e#761#762#0" expanded="false" />
-            <element signature="e#798#799#0" expanded="false" />
-            <element signature="e#835#836#0" expanded="false" />
-            <element signature="e#874#875#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Model/StockBrandName.java">
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/DashboardFormController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/LoaderUI/UILoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6222">
+          <caret line="378" column="42" lean-forward="false" selection-start-line="378" selection-start-column="42" selection-end-line="378" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#622#623#0" expanded="false" />
-            <element signature="e#690#691#0" expanded="false" />
-            <element signature="e#722#723#0" expanded="false" />
-            <element signature="e#758#759#0" expanded="false" />
-            <element signature="e#794#795#0" expanded="false" />
-            <element signature="e#832#833#0" expanded="false" />
-            <element signature="e#870#871#0" expanded="false" />
-            <element signature="e#910#911#0" expanded="false" />
+            <element signature="e#16893#16894#0" expanded="false" />
+            <element signature="e#16934#16935#0" expanded="false" />
+            <element signature="e#17206#17207#0" expanded="false" />
+            <element signature="e#17252#17253#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/MainMenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2652">
+          <caret line="161" column="59" lean-forward="false" selection-start-line="161" selection-start-column="59" selection-end-line="161" selection-end-column="59" />
+          <folding>
+            <marker date="1520647616656" expanded="true" signature="1724:3000" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/StyleSheets/mainMenuButtonStyleSheet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/EmployeeInformationFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="94" column="5" lean-forward="false" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
-          <folding>
-            <element signature="method#initialize#0;class#EmployeeInformationFormController#0" expanded="false" />
-            <element signature="method#displayData#0;class#EmployeeInformationFormController#0" expanded="false" />
-            <element signature="method#setEmployee#0;class#EmployeeInformationFormController#0" expanded="false" />
-            <element signature="method#setEmdb#0;class#EmployeeInformationFormController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/javafx.graphics/javafx/application/Platform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="872">
-          <caret line="148" column="23" lean-forward="false" selection-start-line="148" selection-start-column="23" selection-end-line="148" selection-end-column="23" />
-          <folding>
-            <element signature="e#5863#5864#0" expanded="false" />
-            <element signature="e#5910#5911#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/StockCategoriesTableView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StockCategoryTableViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Database/EmployeesDatabaseConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-          <folding>
-            <element signature="method#addEmployee#0;class#EmployeesDatabaseConnector#0" expanded="false" />
-            <element signature="method#searchEmployee#0;class#EmployeesDatabaseConnector#0" expanded="false" />
-            <element signature="method#updateEmployee#0;class#EmployeesDatabaseConnector#0" expanded="false" />
-            <element signature="method#disableEmployee#0;class#EmployeesDatabaseConnector#0" expanded="false" />
-            <element signature="method#enableEmployee#0;class#EmployeesDatabaseConnector#0" expanded="false" />
-            <element signature="method#getEmployeeId#0;class#EmployeesDatabaseConnector#0" expanded="false" />
-            <element signature="method#getEmployee#0;class#EmployeesDatabaseConnector#0" expanded="false" />
-            <element signature="method#getEmployeeList#0;class#EmployeesDatabaseConnector#0" expanded="false" />
-            <element signature="method#getEmployeeList#1;class#EmployeesDatabaseConnector#0" expanded="false" />
-            <element signature="method#addAccount#0;class#EmployeesDatabaseConnector#0" expanded="false" />
-            <element signature="method#searchAccount#0;class#EmployeesDatabaseConnector#0" expanded="false" />
-            <element signature="method#getAccountList#0;class#EmployeesDatabaseConnector#0" expanded="false" />
-            <element signature="method#getAccountList#1;class#EmployeesDatabaseConnector#0" expanded="false" />
-            <marker date="1519822243997" expanded="true" signature="3981:4461" ph="INSERT INTO Employees... " />
-            <marker date="1519822243997" expanded="true" signature="4577:4987" ph="UPDATE Employees... " />
-            <marker date="1519822243997" expanded="true" signature="5108:5228" ph="UPDATE Employees... " />
-            <marker date="1519822243997" expanded="true" signature="5344:5479" ph="UPDATE Employees... " />
-            <marker date="1519822243997" expanded="true" signature="5588:5854" ph="INSERT INTO Accounts... " />
-            <marker date="1519822243997" expanded="true" signature="5989:6083" ph="SELECT * FRO... Accounts" />
-            <marker date="1519822243997" expanded="true" signature="6212:6469" ph="UPDATE Accounts... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/AccountsForm.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/AccountsFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1020">
-          <caret line="92" column="84" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="92" selection-end-column="84" />
-          <folding>
-            <element signature="method#loadDataInObservableList#1;class#AccountsFormController#0" expanded="false" />
-            <element signature="method#displayAccounts#1;class#AccountsFormController#0" expanded="false" />
-            <element signature="method#encryptPassword#0;class#AccountsFormController#0" expanded="false" />
-            <element signature="method#setUILoader#0;class#AccountsFormController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Model/StockCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="47" />
+        <state relative-caret-position="34">
+          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Database/StockDatabaseConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6052">
+        <state relative-caret-position="119">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <marker date="1519148722007" expanded="true" signature="7235:7249" ph="SELECT * FRO... missingValue" />
@@ -1059,255 +1102,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/StocksTableView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="31" column="97" lean-forward="false" selection-start-line="31" selection-start-column="97" selection-end-line="31" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/TableViewStockTypes.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="324" lean-forward="false" selection-start-line="6" selection-start-column="324" selection-end-line="6" selection-end-column="324" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/TableViewStockCategories.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="67" lean-forward="true" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/TableViewStockBrandNames.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="329" lean-forward="false" selection-start-line="6" selection-start-column="329" selection-end-line="6" selection-end-column="329" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/UI/TableViewStockSuppliers.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="328" lean-forward="false" selection-start-line="6" selection-start-column="328" selection-end-line="6" selection-end-column="328" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Model/StockSupplier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1588#1589#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1668#1669#0" expanded="true" />
-            <element signature="e#1709#1710#0" expanded="true" />
-            <element signature="e#1752#1753#0" expanded="true" />
-            <element signature="e#1796#1797#0" expanded="true" />
-            <element signature="e#1846#1847#0" expanded="true" />
-            <element signature="e#1896#1897#0" expanded="true" />
-            <element signature="e#1945#1946#0" expanded="true" />
-            <element signature="e#1994#1995#0" expanded="true" />
-            <element signature="e#2036#2037#0" expanded="true" />
-            <element signature="e#2079#2080#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/MainMenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-233">
-          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1519929825843" expanded="true" signature="1567:2137" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Database/StockDatabaseConnector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="263" column="38" lean-forward="false" selection-start-line="263" selection-start-column="38" selection-end-line="263" selection-end-column="38" />
+        <state relative-caret-position="170">
+          <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="112" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#getInstance#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#openConnection#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#closeConnection#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#setPragmakeysOn#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#addReplenish#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#updateInventory#1;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#getInventoryId#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#addItem#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#addStockCategory#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#addStockType#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#addStockBrandName#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#addStockSupplier#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#disableItem#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#enableItem#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#disableCategory#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#enableCategory#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#disableType#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#enableType#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#disableBrand#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#enableBrand#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#disableSupplier#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#enableSupplier#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#updateItem#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#updateCategory#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#updateType#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#updateBrandName#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#updateSupplier#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#validateStockItemName#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#validateStockItemBarcode#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#validateStockCategory#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#validateStockType#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#validateStockBrandName#0;class#StockDatabaseConnector#0" expanded="false" />
-            <element signature="method#validateStockSupplier#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#validateSupplierName#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#validateSupplierContact#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#validateSupplierEmail#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#getItemId#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#getItemName#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#searchStockCategory#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#searchStockType#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#searchStockBrandName#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#searchStockSupplier#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#searchStockCategory#1;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#searchStockType#1;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#searchStockBrandName#1;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#searchStockSupplier#1;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#getStockCategoryList#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#getStockTypeList#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#getStockBrandNameList#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#getStockSupplierList#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#getItemList#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#getStockCategoryList#1;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#getStockTypeList#1;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#getStockBrandNameList#1;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#getStockSupplierList#1;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#getReplenishmentList#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#getInventoryList#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#getStockItemColumnName#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#getStockSuppliersColumnName#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#getStockCategoriesColumnName#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#getStockTypesColumnName#0;class#StockDatabaseConnector#0" expanded="false" />
             <element signature="method#getStockBrandNamesColumnName#0;class#StockDatabaseConnector#0" expanded="false" />
-            <marker date="1519930112960" expanded="true" signature="3194:4250" ph="CREATE TABLE... IF" />
-            <marker date="1519930112960" expanded="true" signature="4353:4698" ph="CREATE TABLE... IF" />
-            <marker date="1519930112960" expanded="true" signature="4791:5108" ph="CREATE TABLE... IF" />
-            <marker date="1519930112960" expanded="true" signature="5186:5527" ph="CREATE TABLE... IF" />
-            <marker date="1519930112960" expanded="true" signature="5632:6160" ph="CREATE TABLE... IF" />
-            <marker date="1519930112960" expanded="true" signature="6271:6362" ph="INSERT INTO Categories... " />
-            <marker date="1519930112960" expanded="true" signature="6464:6562" ph="INSERT INTO Types... " />
-            <marker date="1519930112960" expanded="true" signature="6672:6782" ph="INSERT INTO BrandNames... " />
-            <marker date="1519930112960" expanded="true" signature="6893:7212" ph="INSERT INTO Suppliers... " />
-            <marker date="1519930112960" expanded="false" signature="38116:38126" ph="&lt;~&gt;" />
-            <marker date="1519930112960" expanded="false" signature="41967:41976" ph="&lt;~&gt;" />
+            <element signature="method#getInventoryColumnName#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#getReplenishColumnName#0;class#StockDatabaseConnector#0" expanded="false" />
+            <element signature="method#getSalesColumnName#0;class#StockDatabaseConnector#0" expanded="false" />
+            <marker date="1520541069046" expanded="true" signature="190:10240" ph="..." />
+            <marker date="1520541069046" expanded="true" signature="10359:10710" ph="INSERT INTO Inventory... " />
+            <marker date="1520541069046" expanded="true" signature="10359:10712" ph="INSERT INTO Inventory... " />
+            <marker date="1520541069046" expanded="true" signature="10359:10841" ph="INSERT INTO Inventory... " />
+            <marker date="1520541069046" expanded="true" signature="10956:11372" ph="INSERT INTO Sales... " />
+            <marker date="1520541069046" expanded="true" signature="11506:11957" ph="INSERT INTO StockReplenishment... " />
+            <marker date="1520541069046" expanded="true" signature="12064:12718" ph="INSERT INTO Stocks... " />
+            <marker date="1520541069046" expanded="true" signature="12834:12925" ph="INSERT INTO Categories... " />
+            <marker date="1520541069046" expanded="true" signature="13027:13125" ph="INSERT INTO Types... " />
+            <marker date="1520541069046" expanded="true" signature="13235:13345" ph="INSERT INTO BrandNames... " />
+            <marker date="1520541069046" expanded="true" signature="13456:13775" ph="INSERT INTO Suppliers... " />
+            <marker date="1520541069046" expanded="true" signature="13887:14008" ph="UPDATE Stocks... " />
+            <marker date="1520541069046" expanded="true" signature="14119:14239" ph="UPDATE Stocks... " />
+            <marker date="1520541069046" expanded="true" signature="14360:14479" ph="UPDATE Categories... " />
+            <marker date="1520541069046" expanded="true" signature="14594:14728" ph="UPDATE Categories... " />
+            <marker date="1520541069046" expanded="true" signature="14837:14959" ph="UPDATE Types... " />
+            <marker date="1520541069046" expanded="true" signature="15064:15185" ph="UPDATE Types... " />
+            <marker date="1520541069046" expanded="true" signature="15297:15437" ph="UPDATE BrandNames... " />
+            <marker date="1520541069046" expanded="true" signature="15545:15684" ph="UPDATE BrandNames... " />
+            <marker date="1520541069046" expanded="true" signature="15802:15936" ph="UPDATE Suppliers... " />
+            <marker date="1520541069046" expanded="true" signature="16050:16183" ph="UPDATE Suppliers... " />
+            <marker date="1520541069046" expanded="true" signature="16294:16918" ph="UPDATE Stocks... " />
+            <marker date="1520541069046" expanded="true" signature="17038:17159" ph="UPDATE Categories... " />
+            <marker date="1520541069046" expanded="true" signature="17271:17395" ph="UPDATE Types... " />
+            <marker date="1520541069046" expanded="true" signature="17511:17653" ph="UPDATE BrandNames... " />
+            <marker date="1520541069046" expanded="true" signature="17778:18131" ph="UPDATE Suppliers... " />
+            <marker date="1520541069046" expanded="true" signature="22171:22339" ph="UPDATE Inventory... " />
+            <marker date="1520541069046" expanded="true" signature="22171:22369" ph="UPDATE Inventory... " />
+            <marker date="1520541069046" expanded="true" signature="22171:22370" ph="UPDATE Inventory... " />
+            <marker date="1520541069046" expanded="true" signature="22171:22411" ph="UPDATE Inventory... " />
+            <marker date="1520541069046" expanded="true" signature="22171:22412" ph="UPDATE Inventory... " />
+            <marker date="1520541069046" expanded="true" signature="63976:63990" ph="SELECT * FRO... Sales" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StockSupplierController.java">
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/javafx.graphics/javafx/application/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1966">
-          <caret line="132" column="32" lean-forward="false" selection-start-line="132" selection-start-column="32" selection-end-line="132" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StocksTableViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="929">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#displayTableCategories#0;class#StocksTableViewController#0" expanded="false" />
-            <element signature="method#displayTableTypes#0;class#StocksTableViewController#0" expanded="false" />
-            <element signature="method#displayTableStockSuppliers#0;class#StocksTableViewController#0" expanded="false" />
-            <element signature="method#displayTableBrandNames#0;class#StocksTableViewController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/RegisterFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state relative-caret-position="1381">
+          <caret line="350" column="25" lean-forward="false" selection-start-line="350" selection-start-column="25" selection-end-line="350" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/EmployeesFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="176" column="55" lean-forward="true" selection-start-line="176" selection-start-column="7" selection-end-line="176" selection-end-column="55" />
-          <folding>
-            <element signature="method#setDataOnColumn#0;class#EmployeesFormController#0" expanded="false" />
-            <element signature="method#setContextMenuOnTableView#0;class#EmployeesFormController#0" expanded="false" />
-            <element signature="method#setActionOnDoubleClickOnTableRow#0;class#EmployeesFormController#0" expanded="false" />
-            <element signature="method#viewEmployee#0;class#EmployeesFormController#0" expanded="false" />
-            <element signature="method#disableEmployee#0;class#EmployeesFormController#0" expanded="false" />
-            <element signature="method#enableEmployee#0;class#EmployeesFormController#0" expanded="false" />
-            <element signature="method#setEmdb#0;class#EmployeesFormController#0" expanded="false" />
-            <element signature="method#setUiLoader#0;class#EmployeesFormController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StockCategorieController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="139" column="5" lean-forward="true" selection-start-line="133" selection-start-column="3" selection-end-line="139" selection-end-column="5" />
+        <state relative-caret-position="187">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setDataOnColumn#0;class#StockCategorieController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StockTypeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="128" column="39" lean-forward="false" selection-start-line="128" selection-start-column="39" selection-end-line="128" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#displayTableView#1;class#StockTypeController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/Controller/StockBrandNameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="135" column="40" lean-forward="false" selection-start-line="135" selection-start-column="40" selection-end-line="135" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hardware/fiesta/LoaderUI/UILoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1018">
-          <caret line="128" column="87" lean-forward="false" selection-start-line="128" selection-start-column="87" selection-end-line="128" selection-end-column="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8703#8704#0" expanded="true" />
-            <element signature="e#8748#8749#0" expanded="true" />
-            <element signature="e#8805#8806#0" expanded="true" />
-            <element signature="e#8846#8847#0" expanded="true" />
-            <element signature="method#getEmployeeInformationFormController#0;class#UILoader#0" expanded="false" />
-            <element signature="e#10651#10652#0" expanded="true" />
-            <element signature="e#10699#10700#0" expanded="true" />
-            <element signature="e#11572#11573#0" expanded="true" />
-            <element signature="e#11599#11600#0" expanded="true" />
-            <element signature="e#11646#11647#0" expanded="true" />
-            <element signature="e#11673#11674#0" expanded="true" />
-            <element signature="e#11954#11955#0" expanded="true" />
-            <element signature="e#12003#12004#0" expanded="true" />
-            <element signature="e#12050#12051#0" expanded="true" />
-            <element signature="e#12094#12095#0" expanded="true" />
-            <element signature="e#12137#12138#0" expanded="true" />
-            <element signature="e#12177#12178#0" expanded="true" />
-            <element signature="e#12221#12222#0" expanded="true" />
-            <element signature="e#12262#12263#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1389,7 +1302,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>sqlite-jdbc-3.21.0</last-edited>
+          <last-edited>commons-codec-1.10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
